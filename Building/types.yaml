@@ -196,7 +196,7 @@ components:
         x-ngsi:
           type: Geoproperty         
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"             
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"             
     Building:
       allOf:
         - $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml#/Building"
@@ -208,7 +208,7 @@ components:
           x-ngsi:
             type: "Relationship"
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"           
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"           
     Floor:
       required:
         - id
@@ -410,7 +410,7 @@ components:
           x-ngsi:
             type: Relationship
         relativePosition:
-          description: "This property that describes the relative position of a floor in a 2D space. This can be a Point, LineString, MultiLineString, Polygon."
+          description: "This property that describes the relative position of a floor in a 2D space. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object
           properties:
             type:
@@ -419,6 +419,7 @@ components:
                 - "LineString"
                 - "MultiLineString"
                 - "Point"
+                - "Trimesh"
               type: string
             measurementUnit:
               type: string
@@ -429,11 +430,13 @@ components:
               type: string   
             coordinates:
               type: array
+            faces:
+              type: array
           x-ngsi:
             type: Property
       type: object
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
     Zone:
       required:
         - id
@@ -477,7 +480,7 @@ components:
           x-ngsi:
             type: "Relationship"
         relativePosition:
-          description: "This property that describes the relative position of a zone in a 2D space. This can be a Point, LineString, MultiLineString, Polygon."
+          description: "This property that describes the relative position of a zone in a 2D space. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object
           properties:
             type:
@@ -486,6 +489,7 @@ components:
                 - "LineString"
                 - "MultiLineString"
                 - "Point"
+                - "Trimesh"
               type: string
             measurementUnit:
               type: string
@@ -496,6 +500,8 @@ components:
               type: string   
             coordinates:
               type: array
+            faces:
+              type: array
           x-ngsi:
             type: Property
         roomsInZone:
@@ -505,7 +511,7 @@ components:
             type: Relationship
       type: object
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
     Room:
       required:
         - id
@@ -581,7 +587,7 @@ components:
           x-ngsi:
             type: Relationship
         relativePosition:
-          description: "This property describes the relative position of a floor in 2D. This can be a Point, LineString, MultiLineString, Polygon."
+          description: "This property describes the relative position of a floor in 2D. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object
           properties:
             type:
@@ -590,6 +596,7 @@ components:
                 - "LineString"
                 - "MultiLineString"
                 - "Point"
+                - "Trimesh"
               type: string
             measurementUnit:
               type: string
@@ -600,11 +607,13 @@ components:
               type: string   
             coordinates:
               type: array
+            faces:
+              type: array
           x-ngsi:
             type: Property
       type: object
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
     Door:
       required:
         - id
@@ -637,7 +646,7 @@ components:
           x-ngsi:
             type: Relationship    
         relativePosition:
-          description: "This property describes the relative position of a door in 2D. This can be a Point, LineString, MultiLineString, Polygon."
+          description: "This property describes the relative position of a door in 2D. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object
           properties:
             type:
@@ -646,6 +655,7 @@ components:
                 - "LineString"
                 - "MultiLineString"
                 - "Point"
+                - "Trimesh"
               type: string
             measurementUnit:
               type: string
@@ -656,11 +666,13 @@ components:
               type: string   
             coordinates:
               type: array
+            faces:
+              type: array
           x-ngsi:
             type: Property
       type: object
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
     Window:
       required:
         - id
@@ -693,7 +705,7 @@ components:
           x-ngsi:
             type: Relationship       
         relativePosition:
-          description: "This property describes the relative position of a window in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon."
+          description: "This property describes the relative position of a window in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object
           properties:
             type:
@@ -702,6 +714,7 @@ components:
                 - "LineString"
                 - "MultiLineString"
                 - "Point"
+                - "Trimesh"
               type: string
             measurementUnit:
               type: string
@@ -712,15 +725,76 @@ components:
               type: string  
             coordinates:
               type: array
+            faces:
+              type: array
           x-ngsi:
             type: Property
       type: object
       x-ngsi:
-        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
+    Stair:
+      required:
+        - id
+        - type
+        - relativePosition
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: "Property. Identifier format of any NGSI entity"
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Window'
+           enum:
+             - Stair
+           type: string
+           x-ngsi:
+            type: Property    
+        sensors:
+          description: "This property enlists the sensors deployed on a Staircase."
+          "type": "array"
+          x-ngsi:
+            type: Relationship       
+        relativePosition:
+          description: "This property describes the relative position of a Staircase in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+                - "Trimesh"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string  
+            coordinates:
+              type: array
+            faces:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"    
 info:
-  description: "Data Models used within TSP Building"
-  title: TSPModeling
-  version: "1.0.1"
+  description: "Data Models used for Buildings"
+  title: BuildingModeling
+  version: "1.0.2"
 openapi: "3.0.3"
 paths:
   /ngsi-ld/v1/entities:

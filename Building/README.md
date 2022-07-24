@@ -1,12 +1,12 @@
 # Context link for ngsi-ld
-As there has been a migration from pastebin to gitlab hosting the new context link is the following  
-"https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw"
+As there has been a migration from gitlab to github hosting the new context link is the following  
+"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json"
 
 # Building modeling  
 This folder contain a number of data models related to the modelling of Buildings,floors,zones and rooms. 
 
 # General Diagram of Relationships
-![BuildingModelRelationships.png](ngsild-models/Building/BuildingModelRelationships.png "General Diagram of Relationships")
+![BuildingModelRelationships.png](/Building/BuildingModelRelationships.png "General Diagram of Relationships")
 
 ## List of data models
 The following entity types are available:
