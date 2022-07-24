@@ -1,0 +1,472 @@
+--- 
+components: 
+  schemas:
+    WiFi-Router:
+      description: 'This data model contains relative information about a WiFi-Router.'
+      properties:
+        alternateName:
+          description: 'An alternative name for this item.'
+          type: string
+          x-ngsi:
+            type: Property
+        coverage:
+          description: 'The area covered by the device.'
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            coordinates:
+              type: array
+              items:
+                type: number
+            Dimensions:
+              enum:
+                - "2D"
+              type: string
+          x-ngsi:
+            type: Property
+        accessMethod:
+          description: 'The method which someone can access the device. Enum: [accessToken, loginCredentials].'
+          enum:
+            - accessToken
+            - loginCredentials
+          type: string
+          x-ngsi:
+            type: Property
+        batteryLevel:
+          description: 'Device battery level. It must be equal to 1.0 when battery is full. 0.0 when battery is empty. -1 when transiently cannot be determined.'
+          oneOf:
+            - maximum: 1
+              minimum: 0
+              type: number
+            - maximum: -1
+              minimum: -1
+              type: number
+          x-ngsi:
+            type: Property
+        controlledAsset:
+          description: 'List of the asset(s) (building, object, etc.) controlled by the device.'
+          items:
+            oneOf:
+              - format: uri
+                type: string
+              - anyOf: &device_-_properties_-_id_-_anyof
+                  - description: 'Property. Identifier format of any NGSI entity'
+                    maxLength: 256
+                    minLength: 1
+                    pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                    type: string
+                  - description: 'Property. Identifier format of any NGSI entity'
+                    format: uri
+                    type: string
+                description: 'Property. Unique identifier of the entity'
+          type: array
+          x-ngsi:
+            type: Property
+        description:
+          description: 'A description of this item.'
+          type: string
+          x-ngsi:
+            type: Property
+        deviceState:
+          description: 'State of this device from an operational point of view. Its value can be vendor dependent. Enum: [On, Off].'
+          enum:
+            - 'On'
+            - 'Off'
+          type: string
+          x-ngsi:
+            type: Property
+        direction:
+          description: 'A timestamp which denotes when the device was installed (if it requires installation). Enum: [Inlet, Outlet, Entry, Exit].'
+          enum:
+            - Inlet
+            - Outlet
+            - Entry
+            - Exit
+          type: string
+          x-ngsi:
+            type: Property
+        firmwareVersion:
+          description: 'The firmware version of this device.'
+          type: string
+          x-ngsi:
+            type: Property
+        hardwareVersion:
+          description: 'The hardware version of this device.'
+          type: string
+          x-ngsi:
+            type: Property
+        id:
+          anyOf: *device_-_properties_-_id_-_anyof
+          description: 'Unique identifier of the entity'
+          x-ngsi:
+            type: Property
+        ipAddress:
+          description: 'List of IP address of the device. It can be a comma separated list of values if the device has more than one IP address.'
+          items:
+            oneOf:
+              - format: ipv4
+              - format: ipv6
+            type: string
+          type: array
+          x-ngsi:
+            type: Property
+        macAddress:
+          description: 'The MAC address of the device.'
+          pattern: ^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$
+          type: string
+          x-ngsi:
+            type: Property
+        name:
+          description: 'The name of this item.'
+          type: string
+          x-ngsi:
+            type: Property
+        osVersion:
+          description: 'The version of the host operating system device.'
+          type: string
+          x-ngsi:
+            type: Property
+        inSpace:
+          description: 'This information indicates if the camera is inside or mounted to a known space. If the value of the array is empty then the camera is located somewhere detached from a space. If there is a value then the relative Position coordinates are used otherwise location is preferred.'
+          type: string
+          x-ngsi:
+            type: Relationship
+        relativePosition:
+          description: "This property describes the relative position of the device in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            coordinates:
+              type: array
+              items:
+                type: number
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string
+          x-ngsi:
+            type: Property
+        location:
+          description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+          oneOf:
+            - description: 'Geoproperty. Geojson reference to the item. Point'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                type:
+                  enum:
+                    - Point
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON Point'
+              type: object
+            - description: 'Geoproperty. Geojson reference to the item. LineString'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 2
+                  type: array
+                type:
+                  enum:
+                    - LineString
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON LineString'
+              type: object
+            - description: 'Geoproperty. Geojson reference to the item. Polygon'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 4
+                    type: array
+                  type: array
+                type:
+                  enum:
+                    - Polygon
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON Polygon'
+              type: object
+            - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  type: array
+                type:
+                  enum:
+                    - MultiPoint
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON MultiPoint'
+              type: object
+            - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 2
+                    type: array
+                  type: array
+                type:
+                  enum:
+                    - MultiLineString
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON MultiLineString'
+              type: object
+            - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+              properties:
+                bbox:
+                  items:
+                    type: number
+                  minItems: 4
+                  type: array
+                coordinates:
+                  items:
+                    items:
+                      items:
+                        items:
+                          type: number
+                        minItems: 2
+                        type: array
+                      minItems: 4
+                      type: array
+                    type: array
+                  type: array
+                type:
+                  enum:
+                    - MultiPolygon
+                  type: string
+              required:
+                - type
+                - coordinates
+              title: 'GeoJSON MultiPolygon'
+              type: object
+          x-ngsi:
+            type: Geoproperty
+        rssi:
+          description: 'Received signal strength indicator for a wireless enabled device. It must be expressed in dBm or mW, use unitcode to set it out. '
+          type: number
+          x-ngsi:
+            type: Property
+        serialNumber:
+          description: 'The serial number assigned by the manufacturer.'
+          type: string
+          x-ngsi:
+            type: Property
+        softwareVersion:
+          description: 'The software version of this device.'
+          type: string
+          x-ngsi:
+            type: Property
+        software-auto-update:
+          description: 'Software - Auto Update.'    
+          type: boolean    
+          x-ngsi:    
+            type: Property
+        remote-management:
+          description: 'Allows support remote access so support can control user setting and troubleshoot problem.'    
+          type: boolean    
+          x-ngsi:    
+            type: Property
+        source:
+          description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+          type: string
+          x-ngsi:
+            type: Property
+        supportedProtocol:
+          description: 'Supported protocol(s) or networks'
+          items:
+            enum:
+              - 'wifi 2.4'
+              - 'wifi 5'
+              - 3g
+              - bluetooth
+              - 'bluetooth LE'
+              - cat-m
+              - coap
+              - ec-gsm-iot
+              - gprs
+              - http
+              - lwm2m
+              - lora
+              - lte-m
+              - mqtt
+              - nb-iot
+              - onem2m
+              - sigfox
+              - ul20
+              - websocket
+            type: string
+          type: array
+          x-ngsi:
+            model: 'wifi 2.4, wifi 5, 3g, bluetooth, bluetooth LE, cat-m, coap, ec-gsm-iot, gprs, http, lwm2m, lora, lte-m, mqtt, nb-iot, onem2m, sigfox, ul20, websocket'
+            type: Property
+        type:
+          description: 'NGSI Entity type. It has to be WiFi-Router.'
+          enum:
+            - WiFi-Router
+          type: string
+          x-ngsi:
+            type: Property
+        observations:
+          description: "This property enlists the all the observations made by the device."
+          type: array
+          items:
+                type: string
+          x-ngsi:
+            type: Relationship
+        controlledObservation:
+          description: 'Anything that can be sensed, measured or controlled by. Enum: [connectedDevices, airPollution, atmosphericPressure, averageVelocity, batteryLife, batterySupply, cdom, conductance, conductivity, depth, eatingActivity, electricityConsumption, energy, fillingLevel, freeChlorine, gasConsumption, gateOpening, heading, humidity, light, location, milking, motion, movementActivity, noiseLevel, occupancy, orp, pH, power, precipitation, pressure, refractiveIndex, salinity, smoke, soilMoisture, solarRadiation, speed, tds, temperature, trafficFlow, tss, turbidity, waterConsumption, waterFlow, waterLevel, waterPollution, weatherConditions, weight, windDirection, windSpeed].'
+          items:
+            enum:
+              - connectedDevices
+              - airPollution
+              - atmosphericPressure
+              - averageVelocity
+              - batteryLife
+              - batterySupply
+              - cdom
+              - conductance
+              - conductivity
+              - depth
+              - eatingActivity
+              - electricityConsumption
+              - energy
+              - fillingLevel
+              - freeChlorine
+              - gasConsumption
+              - gateOpening
+              - heading
+              - humidity
+              - light
+              - location
+              - milking
+              - motion
+              - movementActivity
+              - noiseLevel
+              - occupancy
+              - orp
+              - pH
+              - power
+              - precipitation
+              - pressure
+              - refractiveIndex
+              - salinity
+              - smoke
+              - soilMoisture
+              - solarRadiation
+              - speed
+              - tds
+              - temperature
+              - trafficFlow
+              - tss
+              - turbidity
+              - waterConsumption
+              - waterFlow
+              - waterLevel
+              - waterPollution
+              - weatherConditions
+              - weight
+              - windDirection
+              - windSpeed
+            type: string
+          type: array
+          x-ngsi:
+            type: Property
+      required:
+        - id
+        - type
+        - controlledObservation
+        - inSpace
+      type: object
+      x-ngsi:
+        uri-prefix: ""
+info: 
+  description: "Data model of WiFi-Router devices"
+  title: WiFi-Router
+  version: "1.0.0"
+openapi: "3.0.0"
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      responses: 
+        ? "200"
+        : 
+          description:  OK
+          content: 
+            application/ld+json: 
+              schema: 
+                type: object

@@ -1,0 +1,459 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "urn:ngsi-ld:ModelSchema:modelschema-9679adb7-f6454f672a9c",
+    "title": "Common entities included in Buildings in smart communities",
+    "definitions": {
+        "Community": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Community"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Community"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "HasBuildings": {
+                    "type": "array"
+                },
+                "allOf":[{
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+                }]
+                
+            }
+        },
+        "Building": {
+            "allOf": [{
+                "$ref": "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml#/Building"
+            }],
+            "properties": {
+                "InCommunity": {
+                    "type": "string",
+                    "description": "The name of the community the building belongs to, as directed by the containedInPlace attribute"
+                },
+                "HasZones": {
+                    "type": "array"
+                },
+                "HasRooms": {
+                    "type": "array"
+                },   
+                "HasFloors": {
+                    "type": "array"
+                }                 
+        },
+        "Floor": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "withinBuilding"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Floor"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Floor"
+                },
+                "numberOfRooms": {
+                    "type": "number"
+                },
+                "roomsOnFloor": {
+                    "type": "array"
+                },
+                "withinBuilding": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Property. A description of this item"
+                },
+                "allOf":[{
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+                }],
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "Zone": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "withinBuilding",
+                "relativePosition"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Zone"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Zone"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "withinBuilding": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "zoneColor": {
+                    "type": "string"
+                },
+                "roomsInZone": {
+                    "type": "array"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Property. A description of this item"
+                },
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "Room": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "onFloor",
+                "relativePosition"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Room"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Room"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Property. A description of this item"
+                },
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                },
+                "numberOfWindows": {
+                    "type": "number"
+                },
+                "numberOfDoors": {
+                    "type": "number"
+                },
+                "onFloor": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "inZone": {
+                    "type": "array"
+                },
+                "doorsInRoom": {
+                    "type": "array"
+                },
+                "windowsInRoom": {
+                    "type": "array"
+                },
+                "sensors": {
+                    "type": "array"
+                }
+            }
+        },
+        "Door": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "relativePosition"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Door"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Door"
+                },
+                "sensors": {
+                    "type": "array"
+                },
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+        "Window": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "relativePosition"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Window"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Window"
+                },
+                "sensors": {
+                    "type": "array"
+                },
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        },
+         "Stair": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "relativePosition"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Stair"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Window"
+                },
+                "sensors": {
+                    "type": "array"
+                },
+                "relativePosition": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Polygon",
+                                "Point",
+                                "LineString",
+                                "MultiLineString",
+                                "Trimesh"
+                            ]
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "default": "m"
+                        },
+                        "Dimensions": {
+                            "type": "string",
+                            "enum": [
+                                "2D",
+                                "3D"
+                            ],
+                            "default": "2D"
+                        },
+                        "coordinates": {
+                            "type": "array"
+                        },
+                        "faces": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

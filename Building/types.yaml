@@ -1,0 +1,734 @@
+---
+components:
+  schemas:
+    Community:
+      required:
+        - id
+        - type
+        - name
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Community'
+           enum:
+             - Community
+           type: string
+           x-ngsi:
+            type: Property
+        name:
+          description: "The name of the Community."
+          type: string
+          x-ngsi:
+            type: Property         
+        HasBuildings:
+          description: "The Buildings contained in the community"
+          type: array
+          items:
+            oneOf:
+              - format: uri
+                type: string
+              - anyOf: *anyof
+                description: "Property. Unique identifier of the entity"
+          x-ngsi:
+            type: "Relationship"
+        location:
+        description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+        oneOf:
+          - description: 'Geoproperty. Geojson reference to the item. Point'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - Point
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Point'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. LineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - LineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON LineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. Polygon'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type:
+                enum:
+                  - Polygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Polygon'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPoint
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPoint'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiLineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiLineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 4
+                    type: array
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPolygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPolygon'
+            type: object
+        x-ngsi:
+          type: Geoproperty         
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"             
+    Building:
+      allOf:
+        - $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml#/Building"
+      properties:
+        InCommunity:
+          description: "The name of the community the building belongs to, as directed by the containedInPlace attribute."
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"           
+    Floor:
+      required:
+        - id
+        - type
+        - withinBuilding
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Floor'
+           enum:
+             - Floor
+           type: string
+           x-ngsi:
+            type: Property      
+        name:
+          description: "The name of the floor."
+          type: string
+          x-ngsi:
+            type: Property
+        location:
+        description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+        oneOf:
+          - description: 'Geoproperty. Geojson reference to the item. Point'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - Point
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Point'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. LineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - LineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON LineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. Polygon'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type:
+                enum:
+                  - Polygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Polygon'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPoint
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPoint'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiLineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiLineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 4
+                    type: array
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPolygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPolygon'
+            type: object
+        x-ngsi:
+          type: Geoproperty    
+          
+        numberOfRooms:
+          description: "The number of rooms on the floor."
+          type: number
+          x-ngsi:
+            type: Property
+        withinBuilding:
+          description: "This specifies which building the floor is in."
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"
+        roomsOnFloor:
+          description: "This property enlists the all the rooms on a floor."
+          type: array
+          x-ngsi:
+            type: Relationship
+        relativePosition:
+          description: "This property that describes the relative position of a floor in a 2D space. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string   
+            coordinates:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+    Zone:
+      required:
+        - id
+        - type
+        - withinBuilding
+        - relativePosition
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Zone'
+           enum:
+             - Zone
+           type: string
+           x-ngsi:
+            type: Property      
+        name:
+          description: "The name of the zone."
+          type: string
+          x-ngsi:
+            type: Property
+        zoneColor:
+          description: "The color of the zone, if there is one."
+          type: string
+          x-ngsi:
+            type: Property
+        withinBuilding:
+          description: "This specifies which building the zone is in."
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"
+        relativePosition:
+          description: "This property that describes the relative position of a zone in a 2D space. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string   
+            coordinates:
+              type: array
+          x-ngsi:
+            type: Property
+        roomsInZone:
+          description: "This property enlists the all the rooms in a zone."
+          type: array
+          x-ngsi:
+            type: Relationship
+      type: object
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+    Room:
+      required:
+        - id
+        - type
+        - relativePosition
+        - onFloor
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: "Property. Identifier format of any NGSI entity"
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Zone'
+           enum:
+             - Room
+           type: string
+           x-ngsi:
+            type: Property    
+        name:
+          description: "The name of the room"
+          type: string
+          x-ngsi:
+            type: Property
+        numberOfWindows:
+          description: "The number of windows in the room"
+          type: number
+          x-ngsi:
+            type: Property
+        numberOfDoors:
+          description: "The number of doors in the room"
+          type: number
+          x-ngsi:
+            type: Property
+        onFloor:
+          description: "The floor on which the room is"
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"
+        inZone:
+          description: "The zones in which the room is"
+          type: array
+          items:
+            oneOf:
+              - format: uri
+                type: string
+              - anyOf: *anyof
+                description: "Property. Unique identifier of the entity"
+          x-ngsi:
+            type: "Relationship"
+        sensors:
+          description: "This property enlists the sensors deployed in the room."
+          "type": "array"
+          x-ngsi:
+            type: Relationship
+        doorsInRoom:
+          description: "This property enlists the doors in a room."
+          "type": "array"
+          x-ngsi:
+            type: Relationship
+        windowsInRoom:
+          description: "This property enlists the windows in a room."
+          "type": "array"
+          x-ngsi:
+            type: Relationship
+        relativePosition:
+          description: "This property describes the relative position of a floor in 2D. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string   
+            coordinates:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+    Door:
+      required:
+        - id
+        - type
+        - relativePosition
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: "Property. Identifier format of any NGSI entity"
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Door'
+           enum:
+             - Door
+           type: string
+           x-ngsi:
+            type: Property    
+        sensors:
+          description: "This property enlists the sensors deployed on a door."
+          "type": "array"
+          x-ngsi:
+            type: Relationship    
+        relativePosition:
+          description: "This property describes the relative position of a door in 2D. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string   
+            coordinates:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+    Window:
+      required:
+        - id
+        - type
+        - relativePosition
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: "Property. Identifier format of any NGSI entity"
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Window'
+           enum:
+             - Window
+           type: string
+           x-ngsi:
+            type: Property    
+        sensors:
+          description: "This property enlists the sensors deployed on a window."
+          "type": "array"
+          x-ngsi:
+            type: Relationship       
+        relativePosition:
+          description: "This property describes the relative position of a window in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon."
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string  
+            coordinates:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Ftype-definitions.json/raw"
+info:
+  description: "Data Models used within TSP Building"
+  title: TSPModeling
+  version: "1.0.1"
+openapi: "3.0.3"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        "200":
+          content:
+            application/ld+json:
+              schema:
+                type: object
+          description: OK

@@ -1,0 +1,87 @@
+# WiFi-Router
+
+This data model contains relative information about a WiFi-Router.
+-  `alternateName`: An alternative name for this item.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `coverage`: The area covered by the device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `accessMethod`: The method which someone can access the device. Enum: [accessToken, loginCredentials].. One of : `accessToken`, `loginCredentials`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `batteryLevel`: Device battery level. It must be equal to 1.0 when battery is full. 0.0 when battery is empty. -1 when transiently cannot be determined.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `description`: A description of this item.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `deviceState`: State of this device from an operational point of view. Its value can be vendor dependent. Enum: [On, Off].. One of : `On`, `Off`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `direction`: A timestamp which denotes when the device was installed (if it requires installation). Enum: [Inlet, Outlet, Entry, Exit].. One of : `Inlet`, `Outlet`, `Entry`, `Exit`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `firmwareVersion`: The firmware version of this device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `hardwareVersion`: The hardware version of this device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `id`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `ipAddress`: List of IP address of the device. It can be a comma separated list of values if the device has more than one IP address.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `macAddress`: The MAC address of the device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `name`: The name of this item.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `osVersion`: The version of the host operating system device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `inSpace`: This information indicates if the camera is inside or mounted to a known space. If the value of the array is empty then the camera is located somewhere detached from a space. If there is a value then the relative Position coordinates are used otherwise location is preferred.
+   -  Attribute type: **Relationship**. 
+   -  Required
+-  `relativePosition`: This property describes the relative position of the device in 2D or 3D. This can be a Point, LineString, MultiLineString, Polygon.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **Geoproperty**. 
+   -  Optional
+-  `rssi`: Received signal strength indicator for a wireless enabled device. It must be expressed in dBm or mW, use unitcode to set it out.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `serialNumber`: The serial number assigned by the manufacturer.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `softwareVersion`: The software version of this device.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `software-auto-update`: Software - Auto Update.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `remote-management`: Allows support remote access so support can control user setting and troubleshoot problem.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `supportedProtocol`: Supported protocol(s) or networks
+   -  Attribute type: **Property**. [wifi 2.4, wifi 5, 3g, bluetooth, bluetooth LE, cat-m, coap, ec-gsm-iot, gprs, http, lwm2m, lora, lte-m, mqtt, nb-iot, onem2m, sigfox, ul20, websocket](wifi 2.4, wifi 5, 3g, bluetooth, bluetooth LE, cat-m, coap, ec-gsm-iot, gprs, http, lwm2m, lora, lte-m, mqtt, nb-iot, onem2m, sigfox, ul20, websocket)
+   -  Optional
+-  `type`: NGSI Entity type. It has to be WiFi-Router.. One of : `Device`.
+   -  Attribute type: **Property**. 
+   -  Required
+-  `observations`: This property enlists the all the observations made by the device.
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `controlledObservation`: Anything that can be sensed, measured or controlled by. Enum: [connectedDevices, airPollution, atmosphericPressure, averageVelocity, batteryLife, batterySupply, cdom, conductance, conductivity, depth, eatingActivity, electricityConsumption, energy, fillingLevel, freeChlorine, gasConsumption, gateOpening, heading, humidity, light, location, milking, motion, movementActivity, noiseLevel, occupancy, orp, pH, power, precipitation, pressure, refractiveIndex, salinity, smoke, soilMoisture, solarRadiation, speed, tds, temperature, trafficFlow, tss, turbidity, waterConsumption, waterFlow, waterLevel, waterPollution, weatherConditions, weight, windDirection, windSpeed].
+   -  Attribute type: **Property**. 
+   -  Required
