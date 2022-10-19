@@ -1,0 +1,221 @@
+---
+components:
+  schemas:
+    Device:
+      required:
+        - id
+        - type
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Device'
+           enum:
+             - Device
+           type: string
+           x-ngsi:
+            type: Property
+        name:
+          description: "The name of the Device."
+          type: string
+          x-ngsi:
+            type: Property         
+        controlledObservation:
+          description: "The observation types connected with the device."
+          type: array
+          x-ngsi:
+            type: Property
+        observations:
+          description: "List of id's of the observations connected with the device."
+          type: array
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"             
+    Observation:
+      required:
+        - id
+        - type
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Observation'
+           enum:
+             - Observation
+           type: string
+           x-ngsi:
+            type: Property
+        name:
+          description: "The name of the observation."
+          type: string
+          x-ngsi:
+            type: Property
+        category:
+          description: "The category of the observation."
+          type: string
+          x-ngsi:
+            type: Property         
+        dateModified:
+          description: "The date that the observation was modified."
+          type: string
+          x-ngsi:
+            type: Property
+        measurement:
+            required:
+              - value
+              - measurementUnit
+            type: object
+            properties:
+              value: number
+              type: string
+              measurementUnit: string
+              description: "The value of the observation."
+            x-ngsi:
+              type: Property
+        measurementType:
+          description: "The type of the measurement of the observation."
+          type: string
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"           
+    Bin:
+      required:
+        - id
+        - type
+        - relativePosition
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Floor'
+           enum:
+             - Floor
+           type: string
+           x-ngsi:
+            type: Property      
+        name:
+          description: "The name of the bin."
+          type: string
+          x-ngsi:
+            type: Property
+        binCapacity:
+          description: "The capacity of the bin."
+          type: number
+          x-ngsi:
+            type: Property
+        binClearedTime:
+          description: "The time that the bin was cleared."
+          type: string
+          x-ngsi:
+            type: Property
+        binCategory:
+          description: "The category of the bin."
+          type: string
+          x-ngsi:
+            type: Property
+        binFillingLevel:
+          description: "The fill level of the bin."
+          type: number
+          x-ngsi:
+           type: Property
+        binRecommendedLoad:
+          description: "The recommended load of the bin."
+          type: number
+          x-ngsi:
+            type: Property
+        binFull:
+          description: "Returns true if bin is full , false otherwise."
+          type: boolean
+          x-ngsi:
+            type: Property
+        status:
+          description: "The current status of the bin."
+          type: string
+          x-ngsi:
+            type: Property
+        storedItems:
+          description: "List of the items stored in the bin."
+          type: array
+          x-ngsi:
+            type: Property
+        inSpace:
+          description: "The property that the bin is in."
+          type: string
+          x-ngsi:
+            type: Relationship
+        storedWasteKind:
+          description: "The unique kind of waste currently in the bin."
+          type: array
+          x-ngsi:
+            type: Property
+        actuationDevices:
+          description: "The actuation devices related with the bin."
+          type: array
+          x-ngsi:
+            type: Relationship
+        observedDevices: 
+          description: "The observation devices related with the bin."
+          type: array
+          x-ngsi:
+            type: Relationship
+        relativePosition:
+          description: "This property that describes the relative position of a floor in a 2D space. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
+          type: object
+          properties:
+            type:
+              enum:
+                - "Polygon"
+                - "LineString"
+                - "MultiLineString"
+                - "Point"
+                - "Trimesh"
+              type: string
+            measurementUnit:
+              type: string
+            Dimensions:
+              enum:
+                - "2D"
+                - "3D"
+              type: string   
+            coordinates:
+              type: array
+            faces:
+              type: array
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/type-definitions.json"
+   
