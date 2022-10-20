@@ -35,7 +35,7 @@ If one is in a thought process stage, it could be added as an incubated model st
 ## Contributors
 **Kwabena Boateng Amponsem**. PhD Track Student at Institut Polytechnique de Paris.
 
-**Nikolaos Papadakis**.  M.Sc. candidate at University of Crete
+**Nikolaos Papadakis**.  ICS-FORTH Researcher
 
 ## Examples
 Examples of each entity type to be added in the examples folder.

@@ -121,10 +121,7 @@
                             "type": "array"
                         }
                     }
-                },
-                "allOf":[{
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-                }]
+                }
             }
         },
         "Light-Bulb": {
@@ -186,10 +183,7 @@
                             "type": "array"
                         }
                     }
-                },
-                "allOf":[{
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-                }]
+                }
             }
         },
         "WiFi-Router": {
@@ -307,101 +301,170 @@
                             "type": "array"
                         }
                     }
-                },
-                "allOf":[{
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-                }]
+                }
             }
         },
+        "Device": {
+            "type": "object",
+            "required": ["id", "type"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Device"],
+                "description": "Property. NGSI Entity type. It has to be Device."
+              },
+              "name": {
+                "type": "string"
+              },
+              "controlledObservation": {
+                "type": "array"
+              },
+              "observations": {
+                "type": "array"
+              }
+            }
+          },
         "Observation": {
             "type": "object",
-            "required": [
-                "id",
-                "type",
-                "measurement",
-                "measurementType"
-            ],
+            "required": ["id", "type"],
             "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Observation"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be Observation"
-                },
-                "observationCategory": {
-                    "type": "string",
-                    "enum": [
-                        "Virtual",
-                        "Physical"
-                    ]
-                },
-                "measurement": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Observation"],
+                "description": "Property. NGSI Entity type. It has to be Observation."
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "dateModified": {
+                "type": "string"
+              },
+              "measurement": {
+                "type": "object",
+                "required": ["value", "measurementUnit"],
+                "properties": {
+                  "type": {
                     "type": "string"
-                },
-                "measurementType": {
-                    "type": "array",
-                    "enum": [
-                        "connectedDevices",
-                        "airPollution",
-                        "atmosphericPressure",
-                        "averageVelocity",
-                        "batteryLife",
-                        "batterySupply",
-                        "cdom",
-                        "conductance",
-                        "conductivity",
-                        "depth",
-                        "eatingActivity",
-                        "electricityConsumption",
-                        "energy",
-                        "fillingLevel",
-                        "freeChlorine",
-                        "gasConsumption",
-                        "gateOpening",
-                        "heading",
-                        "humidity",
-                        "light",
-                        "location",
-                        "milking",
-                        "motion",
-                        "movementActivity",
-                        "noiseLevel",
-                        "occupancy",
-                        "orp",
-                        "pH",
-                        "power",
-                        "precipitation",
-                        "pressure",
-                        "refractiveIndex",
-                        "salinity",
-                        "smoke",
-                        "soilMoisture",
-                        "solarRadiation",
-                        "speed",
-                        "tds",
-                        "temperature",
-                        "trafficFlow",
-                        "tss",
-                        "turbidity",
-                        "waterConsumption",
-                        "waterFlow",
-                        "waterLevel",
-                        "waterPollution",
-                        "weatherConditions",
-                        "weight",
-                        "windDirection",
-                        "windSpeed"
-                    ]
-                },
-                "allOf":[{
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-                }]
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "measurementUnit": {
+                    "type": "string"
+                  }
+                }
+              },
+              "measurementType": {
+                "type": "string"
+              }
             }
+          },
+        "Bin": {
+            "type": "object",
+            "required": ["id", "type", "relativePosition"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Device"],
+                "description": "Property. NGSI Entity type. It has to be Bin."
+              },
+              "name": {
+                "type": "string"
+              },
+              "binCapacity": {
+                "type": "number"
+              },
+              "binClearedTime": {
+                "type": "string"
+              },
+              "binCategory": {
+                "type": "string"
+              },
+              "binFillingLevel": {
+                "type": "number"
+              },
+              "binRecommendedLoad": {
+                "type": "number"
+              },
+              "binFull": {
+                "type": "boolean"
+              },
+              "status": {
+                "type": "string"
+              },
+              "storedItems": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "inSpace": {
+                "type": "string"
+              },
+              "storedWasteKind": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "actuationDevices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "observationDevices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "relativePosition": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "Polygon",
+                      "Point",
+                      "LineString",
+                      "MultiLineString",
+                      "Trimesh"
+                    ]
+                  },
+                  "measurementUnit": {
+                    "type": "string",
+                    "default": "m"
+                  },
+                  "Dimensions": {
+                    "type": "string",
+                    "enum": ["2D", "3D"],
+                    "default": "2D"
+                  },
+                  "coordinates": {
+                    "type": "array"
+                  },
+                  "faces": {
+                    "type": "array"
+                  }
+                }
+                }    
+            }   
         }
-    }
+    }    
 }
