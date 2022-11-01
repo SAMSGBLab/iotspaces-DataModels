@@ -3,9 +3,9 @@
   "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
   "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/BusStationArea/schema.json",
-  "title": "Bus Station Area Entiy",
+  "title": "BusStationArea",
   "description": "Bus Station Area Entity.",
-  "type": "Bus Station Area",
+  "type": "BusStationArea",
   "name": "Centre Bus Station A(Roma)",
   "locationCoordinates":{
    	"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location",
