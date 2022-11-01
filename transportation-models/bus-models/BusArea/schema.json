@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "description": "Bus entity model described on Smart City Bus Paper.",
+  "type": "Bus Area",
+  "name": "Driver Area",
+  "relativePosition": {
+	  "type": "Polygon",
+	  "measurementUnit" : "m",
+	  "dimensions": "2D",
+	  "coordinates": [[[ 17.5 ,0 ] ,[ 18.125 ,0 ] ,[ 18.125 ,1 ] ,[ 17.5 ,1 ] ,[ 17.5 ,0 ]]] 
+  },
+  "Observations":[
+	"urn:ngsild:observation_N01"
+  ],
+  "RefBusVehicle Model":["urn:ngsild:BusVehicleModel:YZX02"],
+  "required": [
+    "id",
+    "type",
+    "name",
+    "relativePosition"
+  ]
+}

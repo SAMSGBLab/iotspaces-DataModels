@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/BusStationArea/schema.json",
+  "title": "Bus Station Area Entiy",
+  "description": "Bus Station Area Entity.",
+  "type": "Bus Station Area",
+  "name": "Centre Bus Station A(Roma)",
+  "locationCoordinates":{
+   	"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location",
+	"description": "bus station area coordinates."
+
+  },
+  "hasAvailableBuses":[
+	"urn:ngsild:BusVehicleModel:YZX02"
+  ],
+  "required": [
+    "id",
+    "type",
+    "name",
+    "locationCoordinates"
+  ]
+}
