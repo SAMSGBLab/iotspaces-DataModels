@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
-  "$id": "/schema.json",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/blob/main/transportation-models/GTFSRT-model/FeedMessage/schema.json",
   "title": "FeedMessage",
   "description": "FeedMessage",
   "type": "object",
@@ -12,11 +12,7 @@
         "format": "uri"
     },  
     "type": {
-        "type": "string",
-        "enum": [
-            "BusArea"
-        ],
-        "description": "Property. NGSI Entity type. It has to be BusArea"
+        "type": "string"
     },
     "FeedHeader": {
         "type": "object",
