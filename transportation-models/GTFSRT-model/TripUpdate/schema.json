@@ -11,6 +11,13 @@
       "type": "string",
       "format": "uri"
     },
+    "type": {
+      "type": "string",
+      "enum": [
+          "TripUpdate"
+      ],
+      "description": "Property. NGSI Entity type. It has to be TripUpdate"
+    },
     "trip": {
         "type": "object",
         "properties": {
@@ -117,7 +124,8 @@
     },
     "required": [
 	    "id",
-	    "trip"
+	    "trip",
+      "type"
     ]
  }
 }
