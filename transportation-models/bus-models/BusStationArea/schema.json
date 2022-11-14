@@ -3,22 +3,65 @@
   "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
   "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/BusStationArea/schema.json",
-  "title": "BusStationArea",
+  "title": "Bus Station Area Entiy",
   "description": "Bus Station Area Entity.",
-  "type": "BusStationArea",
-  "name": "Centre Bus Station A(Roma)",
-  "locationCoordinates":{
-   	"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location",
-	"description": "bus station area coordinates."
-
-  },
-  "hasAvailableBuses":[
-	"urn:ngsild:BusVehicleModel:YZX02"
-  ],
-  "required": [
-    "id",
-    "type",
-    "name",
-    "locationCoordinates"
-  ]
+  "type": "object",
+  "properties": {
+      "id": {
+          "type": "string",
+          "format": "uri"
+      },  
+      "type": {
+          "type": "string",
+          "enum": [
+              "BusStationArea"
+          ],
+          "description": "Property. NGSI Entity type. It has to be BusStationArea"
+      },
+      "name": {
+        "type": "string"
+      },
+      "relativePosition": {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "enum": [
+                    "Polygon",
+                    "Point",
+                    "LineString",
+                    "MultiLineString",
+                    "Trimesh"
+                ]
+            },
+            "measurementUnit": {
+                "type": "string",
+                "default": "m"
+            },
+            "Dimensions": {
+                "type": "string",
+                "enum": [
+                    "2D",
+                    "3D"
+                ],
+                "default": "2D"
+            },
+            "coordinates": {
+                "type": "array"
+            },
+            "faces": {
+                "type": "array"
+            }
+        }
+      },
+      "Observations":{
+        "type": "array"
+      },
+    "required": [
+      "id",
+      "type",
+      "name",
+      "relativePosition"
+    ]
+  }
 }

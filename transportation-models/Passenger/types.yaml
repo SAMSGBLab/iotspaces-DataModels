@@ -1,0 +1,287 @@
+---
+components:
+  schemas:
+    Passenger:
+      description: 'This entity models a particular bus passenger in a Smart Public Transportation System'
+      required:
+        - id
+        - type
+        - name
+        - Credentials
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Passenger'
+           enum:
+             - Passenger
+           type: string
+           x-ngsi:
+            type: Property
+        name:
+          description: "The name of the Passenger."
+          type: string
+          x-ngsi:
+            type: Property
+        Credentials:
+          description: "The Credentials of the Passenger."
+          type: string
+          x-ngsi:
+            type: Property
+        Interests:
+          description: "Interests declared by a passenger."
+          type: string
+          x-ngsi:
+            type: Property
+        Interests:
+          description: "Email used by passenger account"
+          type: string
+          x-ngsi:
+            type: Property                       
+        Passenger_Intentions:
+          description: "Declarations of Passenger_Intentions by this specific passenger"
+          type: array
+          items:
+            oneOf:
+              - format: uri
+                type: string
+              - anyOf: *anyof
+                description: "Property. Unique identifier of the entity"
+          x-ngsi:
+            type: "Relationship"
+        location:
+        description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+        oneOf:
+          - description: 'Geoproperty. Geojson reference to the item. Point'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - Point
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Point'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. LineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type:
+                enum:
+                  - LineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON LineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. Polygon'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type:
+                enum:
+                  - Polygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON Polygon'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPoint
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPoint'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiLineString
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiLineString'
+            type: object
+          - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+            properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 4
+                    type: array
+                  type: array
+                type: array
+              type:
+                enum:
+                  - MultiPolygon
+                type: string
+            required:
+              - type
+              - coordinates
+            title: 'GeoJSON MultiPolygon'
+            type: object
+        x-ngsi:
+          type: Geoproperty         
+      x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json"             
+    Passenger_Intention:
+      description: 'Information about passenger movement intentions (passenger, itinerary snapshot,boarding stop, disembarkation stop,etc.).'
+      required:
+        - id
+        - type
+        - Passenger
+        - Trip
+        - I_Stop
+        - O_Stop
+
+      properties:
+        id:
+          anyOf: &anyof
+            - description: "Property. Identifier format of any NGSI entity"
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+          format: uri
+          type: string
+          description: "Unique identifier of the entity"
+          x-ngsi:
+            type: Property
+        type:
+           description: 'NGSI Entity type. It has to be Passenger_Intention'
+           enum:
+             - Passenger_Intention
+           type: string
+           x-ngsi:
+            type: Property
+        Passenger:
+          description: "The id of the passenger this passenger_intention entity refers to"
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"
+        Trip:
+          description: "The id of the Trip this passenger_intention entity refers to"
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"    
+        I_Stop:
+          description: "The id of the Ingoing Stop this passenger_intention entity refers to"
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"    
+        O_Stop:
+          description: "The id of the Outgoing Stop this passenger_intention entity refers to"
+          type: string
+          format: uri
+          x-ngsi:
+            type: "Relationship"                    
+        x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json"
+info:
+  description: "Data Models used for passengers of smart public transportation"
+  title: Transport-PassengerModels
+  version: "0.2.2"
+openapi: "3.0.3"
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        "200":
+          content:
+            application/ld+json:
+              schema:
+                type: object
+          description: OK

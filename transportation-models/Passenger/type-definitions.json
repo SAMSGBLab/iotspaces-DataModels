@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "urn:ngsi-ld:ModelSchema:modelschema-qBrcWVKeruFQDAGWzGIM",
+    "title": "Entities used for passengers of smart public transportation",
+    "definitions": {
+        "Passenger": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "name",
+                "Credentials"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Passenger"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Passenger"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "Credentials": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "Interests": {
+                    "type": "string"
+                },
+                "Passenger_Intentions": {
+                    "type": "array"
+                },
+                "allOf":[{
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+                }]
+                
+            }
+        },
+        "Passenger_Intention": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "Trip",
+                "I_Stop",
+                "O_Stop"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Passenger_Intention"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be Passenger_Intention"
+                },
+                "Passenger": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Trip": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "I_Stop": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "O_Stop": {
+                    "type": "string",
+                    "format": "uri"
+                }
+                
+            }
+        }
+}
+}

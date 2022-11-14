@@ -3,15 +3,12 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json",
-    "title": "BusVehicleModel",
+    "title": "Bus Vehicle Model",
     "description": "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.",
     "type": "object",
     "allOf": [
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-        },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
@@ -21,37 +18,9 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "VehicleModel"
+                        "BusVehicleModel"
                     ],
-                    "description": "Property. NGSI Entity type. It has to be VehicleModel"
-                },
-                "vehicleType": {
-                    "type": "string",
-                    "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'.",
-                    "enum": [
-                        "agriculturalVehicle",
-                        "bicycle",
-                        "binTrolley",
-                        "bus",
-                        "car",
-                        "caravan",
-                        "carWithCaravan",
-                        "carWithTrailer",
-                        "cleaningTrolley",
-                        "constructionOrMaintenanceVehicle",
-                        "lorry",
-                        "minibus",
-                        "moped",
-                        "motorcycle",
-                        "motorcycleWithSideCar",
-                        "motorscooter",
-                        "sweepingMachine",
-                        "tanker",
-                        "trailer",
-                        "tram",
-                        "van",
-                        "trolley"
-                    ]
+                    "description": "Property. NGSI Entity type. It has to be BusVehicleModel"
                 },
                 "brandName": {
                     "type": "string",
