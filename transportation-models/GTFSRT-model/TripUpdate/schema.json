@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
-  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/GTFSRT-model/TripDescriptor/schema.json",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/GTFSRT-model/TripUpdate/schema.json",
   "title": "TripUpdate",
   "description": "TripUpdate (write description here from GTFS RT reference).",
   "type": "object",
