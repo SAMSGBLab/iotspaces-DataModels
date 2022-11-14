@@ -263,11 +263,12 @@ components:
           format: uri
           x-ngsi:
             type: "Relationship"                    
-      
+        x-ngsi:
+        uri-prefix: "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json"
 info:
   description: "Data Models used for passengers of smart public transportation"
   title: Transport-PassengerModels
-  version: "0.2.1"
+  version: "0.2.2"
 openapi: "3.0.3"
 paths:
   /ngsi-ld/v1/entities:
