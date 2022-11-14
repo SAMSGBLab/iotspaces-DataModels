@@ -2,33 +2,122 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
-  "$id": "/schema.json",
-  "title": "TripUpdates",
-  "description": "TripUpdates.",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/GTFSRT-model/TripDescriptor/schema.json",
+  "title": "TripUpdate",
+  "description": "TripUpdate (write description here from GTFS RT reference).",
   "type": "object",
   "properties": {
     "id":{
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "trip": {
-        "type": "string",
-	"format": "uri",
-        "$ref": "TODO"
+        "type": "object",
+        "properties": {
+            "trip_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "route_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "direction_id": {
+              "type": "number"
+           }, 
+            "start_time": {
+                "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "schedule_relationship": {
+              "type": "string",
+              "enum": [
+                  "SCHEDULED",
+                  "ADDED",
+                  "UNSCHEDULED",
+                  "CANCELED",
+                  "REPLACEMENT",
+                  "DUPLICATED"
+              ]
+          }
+        }
     },  
     "bus": {
-        "type": "string",
-	"format": "uri",
-        "$ref": "TODO"
-    },  
+      "type": "object",
+      "properties": {
+        "id":{
+          "type": "string",
+          "format": "uri"
+        },
+        "label":{
+          "type": "string"
+        },
+        "license_plate":{
+          "type": "string"
+        }
+      }
+    },
+    "stop_time_update": {
+      "type": "object",
+      "properties": {
+        "stop_sequence":{
+          "type": "number"
+        },
+        "stop_id":{
+          "type": "string",
+          "format": "uri"
+        },
+        "arrival":{
+          "type": "object",
+          "properties": {
+           "delay":{
+            "type":"number"
+           },
+           "time":{
+            "type":"number"
+           },
+           "uncertainty":{
+            "type":"number"
+           } 
+          }
+        },
+        "departure":{
+          "type": "object",
+          "properties": {
+           "delay":{
+            "type":"number"
+           },
+           "time":{
+            "type":"number"
+           },
+           "uncertainty":{
+            "type":"number"
+           } 
+          }
+        },
+        "schedule_relationship": {
+          "type": "string",
+          "enum": [
+              "SCHEDULED",
+              "ADDED",
+              "UNSCHEDULED",
+              "CANCELED",
+              "REPLACEMENT",
+              "DUPLICATED"
+          ],
+          "default": "SCHEDULED"
+      }
+
+      }
+    }, 
     "timestamp":{
-      "type": "string",
-      "format": "date-time"
+      "type": "number"
     },
     "required": [
 	    "id",
-	    "trip",
-	    "bus",
-	    "timestamp"
+	    "trip"
     ]
  }
 }
