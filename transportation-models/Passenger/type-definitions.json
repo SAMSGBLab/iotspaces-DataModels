@@ -29,6 +29,9 @@
                 "Credentials": {
                     "type": "string"
                 },
+                "email": {
+                    "type": "string"
+                },
                 "Interests": {
                     "type": "string"
                 },

@@ -42,7 +42,12 @@ components:
           description: "Interests declared by a passenger."
           type: string
           x-ngsi:
-            type: Property                 
+            type: Property
+        Interests:
+          description: "Email used by passenger account"
+          type: string
+          x-ngsi:
+            type: Property                       
         Passenger_Intentions:
           description: "Declarations of Passenger_Intentions by this specific passenger"
           type: array
