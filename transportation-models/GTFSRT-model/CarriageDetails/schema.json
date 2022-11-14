@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "CarriageDetails",
+  "description": "CarriageDetails.",
+  "type": "object",
+  "properties": {
+    "id": {
+        "type": "string"
+    },  
+    "label": {
+        "type": "string"
+    },  
+    "occupancy_status":{
+	    "type": "string",
+	    "enum":[
+		"EMPTY",
+		"MANY_SEATS_AVAILABLE",
+		"FEW_SEATS_AVAILABLE",
+		"STANDING_ROOM_ONLY",
+		"CRUSHED_STANDING_ROOM_ONLY",
+		"FULL",
+		"NOT_ACCEPTING_PASSENGERS",
+		"NO_DATA_AVAILABLE",
+		"NOT_BOARDABLE"
+	    ]
+    },
+    "occupancy_percentage": {
+        "type": "integer"
+    },  
+    "carriage_sequence": {
+        "type": "integer"
+    },  
+    
+    "required": [
+      "TODO"
+    ]
+ }
+}

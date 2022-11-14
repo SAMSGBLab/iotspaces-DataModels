@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "Bus Entity",
+  "description": "Bus entity model described on Smart City Bus Paper.",
+  "type": "object",
+  "properties": {
+    "gtfs_realtime_version": {
+        "type": "string"
+    }, 
+    "incrementality": {
+        "type": "string",
+	"enum": [
+		"FULL_DATASET",
+		"DIFFERENTIAL"
+	]
+    }, 
+    "timestamp":{
+	    "type": "string",
+	    "format": "date-time"
+
+    },
+    "required": [
+      "id",
+      "type",
+      "category",
+      "name"
+    ]
+ }
+}

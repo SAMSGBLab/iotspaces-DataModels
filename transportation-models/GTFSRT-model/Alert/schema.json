@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "Alert",
+  "description": "Alert.",
+  "type": "object",
+  "properties": {
+    "active_period": {
+        "type": "TimeRange",
+        "$ref": "TODO"
+    },  
+    "informed_entity": {
+        "type": "EntitySelector",
+        "$ref": "TODO"
+    },
+    "cause": {
+        "type": "string",
+        "enum": [
+          "UNKNOWN_CAUSE",
+          "OTHER_CAUSE",
+          "TECHNICAL_PROBLEM",
+          "STRIKE",
+          "DEMONSTRATION",
+          "ACCIDENT",
+	  "HOLIDAY",
+	  "WEATHER",
+	  "MAINTENANCE",
+	  "CONSTRUCTION",
+	  "POLICE_ACTIVITY",
+	  "MEDICAL_EMERGENCY"
+        ]
+      
+    },
+    "effect":{
+	    "type": "string",
+	    "enum":[
+		   "NO_SERVICE",
+		   "REDUCED_SERVICE",
+		   "SIGNIFICANT_DELAYS",
+		   "DETOUR",
+		   "ADDITIONAL_SERVICE",
+		   "MODIFIED_SERVICE",
+		   "OTHER_EFFECT",
+		   "UNKNOWN_EFFECT",
+		   "STOP_MOVE",
+		   "NO_EFFECT",
+		   "ACCESSIBILITY_ISSUE"
+    	    ]
+
+
+    },
+    "url":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "header_text":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "description_text":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "tts_description_text":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "severity_level":{
+	    "type": "string",
+	    "enum": [
+		    "UNKNOWN_SEVERITY",
+		    "INFO",
+		    "WARNING",
+		    "SEVERE"
+	    ]
+
+    },
+    "image":{
+	    "type": "TODO"
+    },
+    "image_alternative_text":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "cause_detail":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "effect_detail":{
+	    "type": "TranslatedString",
+	    "$ref": "TODO"
+    },
+    "required": [
+      "id",
+      "type",
+      "category",
+      "name"
+    ]
+ }
+}

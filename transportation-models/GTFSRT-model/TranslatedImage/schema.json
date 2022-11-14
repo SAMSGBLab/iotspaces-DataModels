@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "Translated Image",
+  "description": "TranslatedImage.",
+  "type": "object",
+  "properties": {
+    "url": {
+        "type": "string"
+    },  
+    "media_type": {
+        "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "required": [
+      "TODO"
+    ]
+ }
+}

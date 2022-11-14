@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "TripUpdate",
+  "description": "Bus entity model described on Smart City Bus Paper.",
+  "type": "object",
+  "properties": {
+    "trip": {
+        "type": "TripDescriptor",
+        "$ref": "TODO"
+    },  
+    "vehicle": {
+        "type": "VehicleDescriptor",
+        "$ref": "TODO"
+    },  
+    "stop_time_event": {
+        "type": "StopTimeUpdate",
+        "$ref": "TODO"
+    },  
+    
+    "timestamp":{
+      "type": "string",
+      "format": "date-time"
+    },
+    "delay":{
+      "type": "integer"
+    },
+    "to":{
+      "type": "string"
+    },
+    "required": [
+	    "TODO"
+    ]
+ }
+}

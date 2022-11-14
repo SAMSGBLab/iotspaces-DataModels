@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/bus-models/Bus/schema.json",
+  "title": "StopTimeProperties",
+  "description": "StopTimeProperties.",
+  "type": "object",
+  "properties": {
+    "assigned_stop_id": {
+        "type": "string"
+    },  
+    "required": [
+      "assigned_stop_id"
+    ]
+ }
+}
