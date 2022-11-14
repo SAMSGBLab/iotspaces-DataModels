@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/GTFSRT-model/BusPosition/schema.json",
+  "title": "BusPosition",
+  "description": "BusPosition (write description here from GTFS RT reference).",
+  "type": "object",
+  "properties": {
+    "id":{
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+          "BusPosition"
+      ],
+      "description": "Property. NGSI Entity type. It has to be BusPosition"
+    },
+    "trip": {
+        "type": "object",
+        "properties": {
+            "trip_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "route_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "direction_id": {
+              "type": "number"
+           }, 
+            "start_time": {
+                "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "schedule_relationship": {
+              "type": "string",
+              "enum": [
+                  "SCHEDULED",
+                  "ADDED",
+                  "UNSCHEDULED",
+                  "CANCELED",
+                  "REPLACEMENT",
+                  "DUPLICATED"
+              ]
+          }
+        }
+    },  
+    "bus": {
+      "type": "object",
+      "properties": {
+        "id":{
+          "type": "string",
+          "format": "uri"
+        },
+        "label":{
+          "type": "string"
+        },
+        "license_plate":{
+          "type": "string"
+        }
+      }
+    },
+    "position":{
+	"type": "object",
+	"properties":{
+		"latitude":{
+			"type": "float"
+		},
+		"longtitude":{
+			"type": "float"
+		},
+		"bearing":{
+			"type": "float"
+		},
+		"odometer":{
+			"type": "double"
+		},
+		"speed":{
+			"type": "double"
+		}
+
+	}
+    },
+    "current_stop_sequence":{
+      "type": "integer"
+    },
+    "stop_id":{
+      "type": "string"
+    },
+    "current_status":{
+      "type": "string",
+      "enum":[
+	"INCOMING_AT",
+	"STOPPED_AT",
+	"IN_TRANSIT_TO"
+      ]
+    },
+    "timestamp":{
+	    "type": "number"
+    },
+    "congestion_level":{
+	    "type": "string",
+	    "enum":[
+		    "SEVERE_CONGESTION"
+	    ]
+    
+    },
+    "occupancy_status":{
+	    "type": "string",
+	    "enum":[
+		    "EMPTY",
+		    "MANY_SEATS_AVAILABLE",
+		    "FEW_SEATS_AVAILABLE",
+		    "STANDING_ROOM_ONLY",
+		    "CRUSHED_STANDING_ROOM_ONLY",
+		    "FULL",
+		    "NOT_ACCEPTING_PASSENGERS"
+	    ]
+
+
+    },
+    "required": [
+	    "id",
+      	    "type"
+    ]
+ }
+}
