@@ -35,6 +35,12 @@
                 "Interests": {
                     "type": "string"
                 },
+                "IsForNow":{
+                    "type":"boolean"
+                },
+                "IsRepeated":{
+                    "type":"boolean"
+                },
                 "Passenger_Intentions": {
                     "type": "array"
                 },
