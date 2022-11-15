@@ -65,6 +65,12 @@
                     ],
                     "description": "Property. NGSI Entity type. It has to be Passenger_Intention"
                 },
+                "IsForNow":{
+                    "type":"boolean"
+                },
+                "IsRepeated":{
+                    "type":"boolean"
+                },
                 "Passenger": {
                     "type": "string",
                     "format": "uri"
