@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.2.1",
+  "modelTags": "IUDX",
+  "$id": "https://github.com/SAMSGBLab/iotspaces-DataModels/tree/main/transportation-models/GTFSRT-model/TripUpdate/schema.json",
+  "title": "ServiceAlerts",
+  "description": "ServiceAlerts (write description here from GTFS RT reference).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ServiceAlert"
+      ],
+      "description": "Property. NGSI Entity type. It has to be ServiceAlert"
+    },
+    "active_period": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number"
+        },
+        "end": {
+          "type": "number"
+        }
+      }
+    },
+    "informed_entity": {
+      "type": "object",
+      "properties": {
+        "agency_id": {
+          "type": "string",
+	  "format": "uri"
+        },
+        "route_id": {
+          "type": "string",
+	  "format": "uri"
+        },
+        "route_type": {
+          "type": "number"
+        },
+        "trip": {
+          "type": "object",
+          "properties": {
+            "trip_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "route_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "direction_id": {
+              "type": "number"
+            },
+            "start_time": {
+              "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "schedule_relationship": {
+              "type": "string",
+              "enum": [
+                "SCHEDULED",
+                "ADDED",
+                "UNSCHEDULED",
+                "CANCELED",
+                "REPLACEMENT",
+                "DUPLICATED"
+              ]
+            }
+          }
+        },
+        "stop_id": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "cause": {
+      "type": "string",
+      "enum": [
+        "OTHER_CAUSE",
+        "STRIKE",
+        "DEMONSTRATION"
+      ]
+    },
+    "effect": {
+      "type": "string",
+      "enum": [
+        "SIGNIFICANT_DELAYS"
+      ]
+    },
+    "url": {
+      "type": "object",
+      "properties": {
+        "translation": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "header_text": {
+      "type": "object",
+      "properties": {
+        "translation": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "description_text": {
+      "type": "object",
+      "properties": {
+        "translation": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "id",
+      "type"
+    ]
+  }
+}

@@ -91,7 +91,8 @@
       "type": "integer"
     },
     "stop_id":{
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "current_status":{
       "type": "string",
@@ -107,23 +108,13 @@
     "congestion_level":{
 	    "type": "string",
 	    "enum":[
+		    "SEVERE_CONGESTION",
+		    "RUNNING_SMOOTHLY",
+		    "STOP_AND_GO",
+		    "CONGESTION",
 		    "SEVERE_CONGESTION"
 	    ]
     
-    },
-    "occupancy_status":{
-	    "type": "string",
-	    "enum":[
-		    "EMPTY",
-		    "MANY_SEATS_AVAILABLE",
-		    "FEW_SEATS_AVAILABLE",
-		    "STANDING_ROOM_ONLY",
-		    "CRUSHED_STANDING_ROOM_ONLY",
-		    "FULL",
-		    "NOT_ACCEPTING_PASSENGERS"
-	    ]
-
-
     },
     "required": [
 	    "id",
