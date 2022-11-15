@@ -67,28 +67,30 @@
       }
     },
     "stop_time_update": {
-      "type": "object",
-      "properties": {
-        "stop_sequence":{
-          "type": "number"
-        },
-        "stop_id":{
-          "type": "string",
-          "format": "uri"
-        },
-        "arrival":{
-          "type": "object",
-          "properties": {
-           "delay":{
-            "type":"number"
-           },
-           "time":{
-            "type":"number"
-           },
-           "uncertainty":{
-            "type":"number"
-           } 
-          }
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stop_sequence":{
+            "type": "number"
+          },
+          "stop_id":{
+            "type": "string",
+            "format": "uri"
+          },
+          "arrival":{
+            "type": "object",
+            "properties": {
+             "delay":{
+              "type":"number"
+             },
+             "time":{
+              "type":"number"
+             },
+             "uncertainty":{
+              "type":"number"
+             } 
+            }      
         },
         "departure":{
           "type": "object",
