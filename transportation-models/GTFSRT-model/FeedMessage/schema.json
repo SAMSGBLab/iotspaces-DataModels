@@ -32,9 +32,7 @@
 	}
     },
     "hasFeedEntity":{
-	    "type": "string",
-	    "format": "uri"
-
+	    "type":": "array"
     },
 
     "required": [

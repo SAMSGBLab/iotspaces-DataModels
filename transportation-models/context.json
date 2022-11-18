@@ -4,6 +4,15 @@
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "fiware": "https://uri.fiware.org/ns/dataModels#",
-        "schema": "https://schema.org/"
+        "schema": "https://schema.org/",
+	"Bus": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/bus-models/Bus/schema.json",
+	"BusArea": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/bus-models/BusArea/schema.json",
+	"BusStationArea": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/bus-models/BusStationArea/schema.json",
+	"BusVehicleModel": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/bus-models/BusVehicleModel/schema.json",
+	"BusPosition": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/BusPosition/schema.json",
+	"FeedMessage": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/FeedMessage/schema.json",
+	"ServiceAlert": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/ServiceAlert/schema.json",
+	"TripUpdate": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/TripUpdate/schema.json"
+
     }
 }
