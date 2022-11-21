@@ -251,7 +251,7 @@
     "hasAvailableAreas":{
       "type": "array"
     },
-    "RefBusVehicle Model":{
+    "RefBusVehicle_Model":{
       "type": "string",
       "format": "uri"
     },
