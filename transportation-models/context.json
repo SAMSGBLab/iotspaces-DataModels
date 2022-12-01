@@ -83,6 +83,21 @@
 	"schedule_relationship": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/TripUpdate/schema.json#schedule_relationship",
 	"timestamp": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/GTFSRT-model/TripUpdate/schema.json#timestamp"
 
-
+	"Passenger":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Passenger",
+	"Credentials":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Credentials",
+	"email":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#email",
+	"Interests":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Interests",
+	"Passenger_Intentions":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Passenger_Intentions",
+	"Passenger_Intention":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Passenger_Intention",
+	"IsForNow":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#IsForNow",
+	"IsRepeated":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#IsRepeated",
+	"Trip":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Trip",
+	"I_Stop":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#I_Stop",
+	"O_Stop":"https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#I_Stop"    
+	    
+	    
+	    
+	    
+	    
     }
 }
