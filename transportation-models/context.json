@@ -72,7 +72,7 @@
 		"IsRepeated": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#IsRepeated",
 		"Trip": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#Trip",
 		"I_Stop": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#I_Stop",
-		"O_Stop": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#I_Stop"
+		"O_Stop": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/transportation-models/Passenger/type-definitions.json#O_Stop"
 
 
 
