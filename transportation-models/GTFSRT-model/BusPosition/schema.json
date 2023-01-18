@@ -119,6 +119,9 @@
     "required": [
 	    "id",
       	    "type"
-    ]
+    ],
+	"allOf":[{
+	"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+	}]  
  }
 }
