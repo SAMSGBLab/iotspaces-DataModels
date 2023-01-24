@@ -1,0 +1,126 @@
+{
+        "id": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:38vC2rMpPDpQ1cy52XqxrF",
+        "type": "Floor",
+        "name": {
+            "type": "Property",
+            "value": "Keller"
+        },
+        "withinBuilding": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:3isw_NcDz2ghLEYGeHmBHm"
+        },
+        "roomsOnFloor": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:2FTyCaX9v8nfCZuxbRfoI5",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:18AY1kFR943vJ3hG3MGs_J",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3THyJXDjD6gvBunDjOn_Bs",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:2rCveetpTACvdTm8GZ6ify",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:14jVo771LDLflz2$jXg6OJ",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:2sVEkVJnzA9va_ZC3JKUVn",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:32463lvtj92uFGHzuI2FRs",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3QWIvMZ9nC0PvQnq6tDx7e",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3g0LH0VRX04v5Ni_KZWxIg",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:0bAc_zqmjADQQeG3yF01lX"
+            ]
+        },
+        "numberOfRooms": {
+            "type": "Property",
+            "value": 11
+        },
+        "@context": [
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:0N3USWemr0KgB4UDlFuw2z",
+        "type": "Floor",
+        "name": {
+            "type": "Property",
+            "value": "Erdgeschoss"
+        },
+        "withinBuilding": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:3isw_NcDz2ghLEYGeHmBHm"
+        },
+        "roomsOnFloor": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3c1LGyQIr78urzxQqXNBms",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:09JyzVcIH2Uhy85B8ugWwP",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1dvssawkn26eirV5MjPMWy",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1uIUCaCuX91wkX9CFFIdXY",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:2s04_PpXXFIP6WA6GbVCHP",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1hGZrVFoHECgN0PY_nDLmG",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3ZC5Ij0wL9_RHDkExPERAb"
+            ]
+        },
+        "numberOfRooms": {
+            "type": "Property",
+            "value": 7
+        },
+        "@context": [
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:0Jy7nvJPr4avJ7rEk394Tm",
+        "type": "Floor",
+        "name": {
+            "type": "Property",
+            "value": "Obergeschoss"
+        },
+        "withinBuilding": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:3isw_NcDz2ghLEYGeHmBHm"
+        },
+        "roomsOnFloor": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:30$a4G7pj3Y9wLinj2N5c$",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3cpMFJrwb898KMNzxSO_lD",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:0juvLXf$D7Zu9l1FlGomJY",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3VT0kiHYf10gS8Pv0OHCEt",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:39zCQh3_D2iA9k_fb05uNf",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:0wldErwsrBSfVpFWWU0$IL",
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:3bPIXWUmr3aRlUPijXF6Om"
+            ]
+        },
+        "numberOfRooms": {
+            "type": "Property",
+            "value": 7
+        },
+        "@context": [
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:1snjtpHWLBnQX6I36Y6QQU",
+        "type": "Floor",
+        "name": {
+            "type": "Property",
+            "value": "Dachgeschoss"
+        },
+        "withinBuilding": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:3isw_NcDz2ghLEYGeHmBHm"
+        },
+        "roomsOnFloor": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:26xidNzAL01OtP$Vx85Uht"
+            ]
+        },
+        "numberOfRooms": {
+            "type": "Property",
+            "value": 1
+        },
+        "@context": [
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    }

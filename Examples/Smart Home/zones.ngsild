@@ -1,0 +1,26 @@
+{
+        "id": "urn:ngsi-ld:Zone:Test:SmartCitiesdomain:SmartBuildings:0aJ7egOIn66uiXCDk6uTq7",
+        "type": "Zone",
+        "name": {
+            "type": "Property",
+            "value": "WC"
+        },
+        "description": {
+            "type": "Property",
+            "value": "Alle WC s im Geb\u00e4ude"
+        },
+        "withinBuilding": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:2yeSWdixz5hBpMywNJnu8J"
+        },
+        "roomsInZone": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp"
+            ]
+        },
+        "@context": [
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    }

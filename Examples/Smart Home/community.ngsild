@@ -1,0 +1,29 @@
+ {
+  "id": "urn:ngsi-ld:Community:Test:SmartCitiesdomain:SmartBuildings:ExampleCommunity",
+  "type": "Community",
+  "HasBuildings": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:Building:Test:SmartCitiesdomain:SmartBuildings:3isw_NcDz2ghLEYGeHmBHm"
+    ]
+  },
+  "location": {
+    "type": "Property",
+    "value": {
+      "coordinates": [
+        [
+          [25.0750599,35.3070706],[25.0704902,35.3069743],[25.0705004,35.3041812],[25.0753909,35.3044001],[25.0750476,35.3070881],[25.0750599,35.3070706]
+        ]
+      ],
+      "type": "Polygon"
+    }
+  },  
+  "name": {
+    "type": "Property",
+    "value": "Test Building Community Area"
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
