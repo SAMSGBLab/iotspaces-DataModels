@@ -11,7 +11,7 @@
   },
   "inSpace": {
     "type": "Relationship",
-    "value": ["urn:ngsi-ld:Observation:example:obs314s12"]
+    "value": ["urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp"]
   },	
   "@context": [
     "https://raw.githubusercontent.com/AlexBorous/device_models_ngsi-ld/38969d8d7fce9f80533e33e63befe191ddfaebe5/context.json"

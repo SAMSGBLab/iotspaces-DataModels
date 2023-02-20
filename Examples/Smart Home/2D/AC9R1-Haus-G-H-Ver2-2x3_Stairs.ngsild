@@ -1,0 +1,298 @@
+[
+    {
+        "id": "urn:ngsi-ld:Stair:Test:SmartCitiesdomain:SmartBuildings:3dA2YBAHr6uxtnbCbOQoHB",
+        "type": "Stair",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.7499999999999996,
+                        4.00122579
+                    ],
+                    [
+                        3.749999999999999,
+                        0.3500000000000001
+                    ],
+                    [
+                        6.35,
+                        0.34999999999999964
+                    ],
+                    [
+                        6.35,
+                        3.55
+                    ],
+                    [
+                        4.949999999999999,
+                        4.00122579
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Stair:Test:SmartCitiesdomain:SmartBuildings:1UuOJr8IXFWPiVUUKbpFNu",
+        "type": "Stair",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        13.843654043699999,
+                        0.81773009
+                    ],
+                    [
+                        12.99726991,
+                        -0.0286560482999999
+                    ],
+                    [
+                        12.995430599999999,
+                        -0.032097129899999896
+                    ],
+                    [
+                        12.995048149999999,
+                        -0.0359801471099999
+                    ],
+                    [
+                        13.01139744,
+                        -0.2018080299999999
+                    ],
+                    [
+                        13.0405036,
+                        -0.2978148599999999
+                    ],
+                    [
+                        13.06005426,
+                        -0.36220679999999994
+                    ],
+                    [
+                        13.13906729,
+                        -0.5100301699999998
+                    ],
+                    [
+                        13.16076094,
+                        -0.53648999
+                    ],
+                    [
+                        13.2454018,
+                        -0.63959819
+                    ],
+                    [
+                        13.34851102,
+                        -0.7242400699999999
+                    ],
+                    [
+                        13.37496987,
+                        -0.7459327299999999
+                    ],
+                    [
+                        13.522794189999999,
+                        -0.82494574
+                    ],
+                    [
+                        13.58718512,
+                        -0.84449639
+                    ],
+                    [
+                        13.68319197,
+                        -0.87360256
+                    ],
+                    [
+                        13.8500010321609,
+                        -0.89003131
+                    ],
+                    [
+                        14.01680901,
+                        -0.87360156
+                    ],
+                    [
+                        14.11281584,
+                        -0.8444964100000001
+                    ],
+                    [
+                        14.17720685,
+                        -0.82494573
+                    ],
+                    [
+                        14.32503008,
+                        -0.7459317500000001
+                    ],
+                    [
+                        14.351489879999999,
+                        -0.7242391500000002
+                    ],
+                    [
+                        14.454599199999999,
+                        -0.6395982000000001
+                    ],
+                    [
+                        14.53924015,
+                        -0.5364888800000002
+                    ],
+                    [
+                        14.56093275,
+                        -0.5100290800000001
+                    ],
+                    [
+                        14.63994674,
+                        -0.36220583000000006
+                    ],
+                    [
+                        14.65949741,
+                        -0.29781381000000007
+                    ],
+                    [
+                        14.68860257,
+                        -0.2018069800000001
+                    ],
+                    [
+                        14.705031309999999,
+                        -0.03499897168960011
+                    ],
+                    [
+                        14.68860156,
+                        0.1318100199999999
+                    ],
+                    [
+                        14.65949641,
+                        0.22781582999999986
+                    ],
+                    [
+                        14.63994574,
+                        0.29220782999999984
+                    ],
+                    [
+                        14.56093175,
+                        0.4400310799999999
+                    ],
+                    [
+                        14.53923911,
+                        0.4664909199999998
+                    ],
+                    [
+                        14.45459716,
+                        0.5695992299999999
+                    ],
+                    [
+                        14.35148804,
+                        0.6542400099999999
+                    ],
+                    [
+                        14.32502923,
+                        0.6759336699999998
+                    ],
+                    [
+                        14.17720481,
+                        0.75494674
+                    ],
+                    [
+                        14.11281383,
+                        0.7744974099999999
+                    ],
+                    [
+                        14.01681031,
+                        0.8036193199999999
+                    ],
+                    [
+                        13.85097814122,
+                        0.8199518499999999
+                    ],
+                    [
+                        13.847095124199999,
+                        0.81956939
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Stair:Test:SmartCitiesdomain:SmartBuildings:2Aq_kCt0PEAw3O7pmOoenK",
+        "type": "Stair",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.7499999999999996,
+                        4.00122579
+                    ],
+                    [
+                        3.749999999999999,
+                        0.3500000000000001
+                    ],
+                    [
+                        6.35,
+                        0.34999999999999964
+                    ],
+                    [
+                        6.35,
+                        3.55
+                    ],
+                    [
+                        4.949999999999999,
+                        4.00122579
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Stair:Test:SmartCitiesdomain:SmartBuildings:0L5B0eNljAxPkP8RJ0v1i0",
+        "type": "Stair",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.7499999999999996,
+                        4.00122579
+                    ],
+                    [
+                        3.749999999999999,
+                        0.3500000000000001
+                    ],
+                    [
+                        6.35,
+                        0.34999999999999964
+                    ],
+                    [
+                        6.35,
+                        3.55
+                    ],
+                    [
+                        4.949999999999999,
+                        4.00122579
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    }
+]

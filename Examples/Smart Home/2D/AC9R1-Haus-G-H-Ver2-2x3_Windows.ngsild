@@ -1,0 +1,1472 @@
+[
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3BXy52qP1DDeVgBBwOZ3n2",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.115,
+                        0.13
+                    ],
+                    [
+                        6.125,
+                        0.13000000000000003
+                    ],
+                    [
+                        6.125,
+                        0.18
+                    ],
+                    [
+                        6.095000000000001,
+                        0.2
+                    ],
+                    [
+                        5.1450000000000005,
+                        0.2
+                    ],
+                    [
+                        5.115,
+                        0.18
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:33E7nN$zL2AfEpwYe0RL7W",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        1.35,
+                        0.13
+                    ],
+                    [
+                        2.1500000000000004,
+                        0.13000000000000006
+                    ],
+                    [
+                        2.1500000000000004,
+                        0.18
+                    ],
+                    [
+                        2.12,
+                        0.2
+                    ],
+                    [
+                        1.3800000000000001,
+                        0.2
+                    ],
+                    [
+                        1.35,
+                        0.18
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:31xG9i4hHDNvbC9EjYyUMQ",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.375,
+                        9.915
+                    ],
+                    [
+                        10.365,
+                        9.915
+                    ],
+                    [
+                        10.365,
+                        9.864999999999998
+                    ],
+                    [
+                        10.395,
+                        9.844999999999999
+                    ],
+                    [
+                        11.345,
+                        9.844999999999999
+                    ],
+                    [
+                        11.375,
+                        9.864999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:26pZ$lPCD99gUCVVM74VDR",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        8.17
+                    ],
+                    [
+                        11.985,
+                        9.18
+                    ],
+                    [
+                        11.934999999999999,
+                        9.18
+                    ],
+                    [
+                        11.915,
+                        9.15
+                    ],
+                    [
+                        11.915,
+                        8.2
+                    ],
+                    [
+                        11.934999999999999,
+                        8.17
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3VNOJ5mrDC0vlVYqNkcc34",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        0.8499999999999996
+                    ],
+                    [
+                        11.985,
+                        1.8599999999999997
+                    ],
+                    [
+                        11.934999999999999,
+                        1.8599999999999997
+                    ],
+                    [
+                        11.915,
+                        1.8299999999999996
+                    ],
+                    [
+                        11.915,
+                        0.8799999999999997
+                    ],
+                    [
+                        11.934999999999999,
+                        0.8499999999999996
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3Rf2DimWPABu7wtreaT10X",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        5.67
+                    ],
+                    [
+                        11.985,
+                        6.68
+                    ],
+                    [
+                        11.934999999999999,
+                        6.68
+                    ],
+                    [
+                        11.915,
+                        6.65
+                    ],
+                    [
+                        11.915,
+                        5.7
+                    ],
+                    [
+                        11.934999999999999,
+                        5.67
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1diueuORLFjhep098T6FZy",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        3.3499999999999996
+                    ],
+                    [
+                        11.985,
+                        4.359999999999999
+                    ],
+                    [
+                        11.934999999999999,
+                        4.359999999999999
+                    ],
+                    [
+                        11.915,
+                        4.33
+                    ],
+                    [
+                        11.915,
+                        3.3799999999999994
+                    ],
+                    [
+                        11.934999999999999,
+                        3.3499999999999996
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3LDUbU$tX4I9FGItNO4Pmt",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        4.92,
+                        11.864999999999998
+                    ],
+                    [
+                        4.035,
+                        11.865
+                    ],
+                    [
+                        4.035,
+                        11.814999999999998
+                    ],
+                    [
+                        4.0649999999999995,
+                        11.794999999999998
+                    ],
+                    [
+                        4.89,
+                        11.794999999999998
+                    ],
+                    [
+                        4.92,
+                        11.814999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2vt67CvtzDD8r_0NPZJZ$$",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.835,
+                        11.864999999999998
+                    ],
+                    [
+                        5.95,
+                        11.865
+                    ],
+                    [
+                        5.95,
+                        11.814999999999998
+                    ],
+                    [
+                        5.98,
+                        11.794999999999998
+                    ],
+                    [
+                        6.805,
+                        11.794999999999998
+                    ],
+                    [
+                        6.835,
+                        11.814999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1romkx9sb2mfYEttxEHWPc",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        2.4,
+                        9.899999999999999
+                    ],
+                    [
+                        0.8999999999999999,
+                        9.9
+                    ],
+                    [
+                        0.8999999999999999,
+                        9.849999999999998
+                    ],
+                    [
+                        0.94,
+                        9.829999999999998
+                    ],
+                    [
+                        2.36,
+                        9.829999999999998
+                    ],
+                    [
+                        2.4,
+                        9.849999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:0995Uk$h51991UBtEYRpDp",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.5149999999999997,
+                        11.305
+                    ],
+                    [
+                        3.5149999999999997,
+                        10.295
+                    ],
+                    [
+                        3.5649999999999995,
+                        10.295
+                    ],
+                    [
+                        3.5849999999999995,
+                        10.325
+                    ],
+                    [
+                        3.5849999999999995,
+                        11.275
+                    ],
+                    [
+                        3.5649999999999995,
+                        11.305
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2x7j2ZvWz7chbTzT_6BDiv",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.8999999999999995,
+                        11.864999999999998
+                    ],
+                    [
+                        5.89,
+                        11.864999999999998
+                    ],
+                    [
+                        5.89,
+                        11.814999999999998
+                    ],
+                    [
+                        5.92,
+                        11.794999999999998
+                    ],
+                    [
+                        6.869999999999999,
+                        11.794999999999998
+                    ],
+                    [
+                        6.8999999999999995,
+                        11.814999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1g5vOI97r7guxl$YoHtFVe",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.01,
+                        11.864999999999998
+                    ],
+                    [
+                        4.0,
+                        11.864999999999998
+                    ],
+                    [
+                        4.0,
+                        11.814999999999998
+                    ],
+                    [
+                        4.029999999999999,
+                        11.794999999999998
+                    ],
+                    [
+                        4.9799999999999995,
+                        11.794999999999998
+                    ],
+                    [
+                        5.01,
+                        11.814999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:0JPKnL3K93RPazf8Mse_nZ",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        9.305
+                    ],
+                    [
+                        0.115,
+                        8.295
+                    ],
+                    [
+                        0.165,
+                        8.295
+                    ],
+                    [
+                        0.185,
+                        8.325
+                    ],
+                    [
+                        0.185,
+                        9.275
+                    ],
+                    [
+                        0.165,
+                        9.305
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2SgnWbvl9AhQLGcka2zOkX",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        1.735
+                    ],
+                    [
+                        0.115,
+                        0.7250000000000001
+                    ],
+                    [
+                        0.165,
+                        0.7250000000000001
+                    ],
+                    [
+                        0.185,
+                        0.7550000000000001
+                    ],
+                    [
+                        0.185,
+                        1.705
+                    ],
+                    [
+                        0.165,
+                        1.735
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1vR8jfWxz3oOzN77ltQrp_",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        3.44
+                    ],
+                    [
+                        0.115,
+                        2.8049999999999997
+                    ],
+                    [
+                        0.165,
+                        2.8049999999999997
+                    ],
+                    [
+                        0.185,
+                        2.835
+                    ],
+                    [
+                        0.185,
+                        3.41
+                    ],
+                    [
+                        0.165,
+                        3.44
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:0QTFEhHUn62hFxrUwR$lTk",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        6.94
+                    ],
+                    [
+                        0.11500000000000037,
+                        6.305000000000001
+                    ],
+                    [
+                        0.165,
+                        6.305000000000001
+                    ],
+                    [
+                        0.185,
+                        6.335000000000001
+                    ],
+                    [
+                        0.185,
+                        6.91
+                    ],
+                    [
+                        0.165,
+                        6.94
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:20QANgqUn3089C7N26hqmh",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        7.385,
+                        10.294999999999998
+                    ],
+                    [
+                        7.385,
+                        11.304999999999998
+                    ],
+                    [
+                        7.335,
+                        11.304999999999998
+                    ],
+                    [
+                        7.3149999999999995,
+                        11.274999999999999
+                    ],
+                    [
+                        7.3149999999999995,
+                        10.324999999999998
+                    ],
+                    [
+                        7.335,
+                        10.294999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:11XbeqewPBRuphf3Alj3D4",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        10.364988007280793,
+                        9.914737348577374
+                    ],
+                    [
+                        10.364983399351413,
+                        9.864737348789703
+                    ],
+                    [
+                        10.394981556052262,
+                        9.844734584117008
+                    ],
+                    [
+                        11.34498155201799,
+                        9.844647033458779
+                    ],
+                    [
+                        11.374983395062344,
+                        9.86464426861622
+                    ],
+                    [
+                        11.374988002991724,
+                        9.914644268403888
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2m3G1dyK588xwc3Z8GpVyx",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        8.264988016198659,
+                        9.914930881611353
+                    ],
+                    [
+                        8.264983408269279,
+                        9.864930881823682
+                    ],
+                    [
+                        8.294981564970128,
+                        9.844928117150987
+                    ],
+                    [
+                        9.244981560935855,
+                        9.844840566492758
+                    ],
+                    [
+                        9.27498340398021,
+                        9.864837801650198
+                    ],
+                    [
+                        9.27498801190959,
+                        9.914837801437868
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:0_YS0WxiTDvR8_vHdrTc5J",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.7250000000000001,
+                        0.115
+                    ],
+                    [
+                        1.735,
+                        0.115
+                    ],
+                    [
+                        1.735,
+                        0.165
+                    ],
+                    [
+                        1.705,
+                        0.185
+                    ],
+                    [
+                        0.7550000000000001,
+                        0.185
+                    ],
+                    [
+                        0.7250000000000001,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1c9hLQliz7HhbEob0dkn_B",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        10.364999999999998,
+                        0.115
+                    ],
+                    [
+                        11.374999999999998,
+                        0.115
+                    ],
+                    [
+                        11.374999999999998,
+                        0.165
+                    ],
+                    [
+                        11.344999999999999,
+                        0.185
+                    ],
+                    [
+                        10.394999999999998,
+                        0.185
+                    ],
+                    [
+                        10.364999999999998,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3LrFsmYXfFbPPnSn_GU8eB",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.115,
+                        0.115
+                    ],
+                    [
+                        6.125,
+                        0.11500000000000003
+                    ],
+                    [
+                        6.125,
+                        0.165
+                    ],
+                    [
+                        6.095000000000001,
+                        0.185
+                    ],
+                    [
+                        5.1450000000000005,
+                        0.185
+                    ],
+                    [
+                        5.115,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:0C3bMFWsr1IfGh2HeRskhq",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        8.169999899999999
+                    ],
+                    [
+                        11.985,
+                        9.179999899999999
+                    ],
+                    [
+                        11.934999999999999,
+                        9.179999899999999
+                    ],
+                    [
+                        11.915,
+                        9.1499999
+                    ],
+                    [
+                        11.915,
+                        8.199999899999998
+                    ],
+                    [
+                        11.934999999999999,
+                        8.169999899999999
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1UH4GM6TX09B8UmSxUZx0G",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        6.919999899999999
+                    ],
+                    [
+                        11.985,
+                        7.9299998999999985
+                    ],
+                    [
+                        11.934999999999999,
+                        7.9299998999999985
+                    ],
+                    [
+                        11.915,
+                        7.899999899999999
+                    ],
+                    [
+                        11.915,
+                        6.949999899999999
+                    ],
+                    [
+                        11.934999999999999,
+                        6.919999899999999
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3YWJs9uhz3Wv3cWlXv$s86",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        0.8499998999999985
+                    ],
+                    [
+                        11.985,
+                        1.8599998999999985
+                    ],
+                    [
+                        11.934999999999999,
+                        1.8599998999999985
+                    ],
+                    [
+                        11.915,
+                        1.8299998999999985
+                    ],
+                    [
+                        11.915,
+                        0.8799998999999985
+                    ],
+                    [
+                        11.934999999999999,
+                        0.8499998999999985
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2mu_f$D8z8fQfBkYzutXEv",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        2.0999998999999994
+                    ],
+                    [
+                        11.985,
+                        3.109999899999999
+                    ],
+                    [
+                        11.934999999999999,
+                        3.109999899999999
+                    ],
+                    [
+                        11.915,
+                        3.0799998999999993
+                    ],
+                    [
+                        11.915,
+                        2.129999899999999
+                    ],
+                    [
+                        11.934999999999999,
+                        2.0999998999999994
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2pq3di6WL71OiOdCytUHH_",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        9.275,
+                        9.915
+                    ],
+                    [
+                        8.265,
+                        9.915
+                    ],
+                    [
+                        8.265,
+                        9.864999999999998
+                    ],
+                    [
+                        8.295,
+                        9.844999999999999
+                    ],
+                    [
+                        9.245000000000001,
+                        9.844999999999999
+                    ],
+                    [
+                        9.275,
+                        9.864999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3IK7bW2BDFIxml8zaHSiZF",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        1.9750000000000003,
+                        0.115
+                    ],
+                    [
+                        2.9850000000000003,
+                        0.115
+                    ],
+                    [
+                        2.9850000000000003,
+                        0.165
+                    ],
+                    [
+                        2.955,
+                        0.185
+                    ],
+                    [
+                        2.0050000000000003,
+                        0.185
+                    ],
+                    [
+                        1.9750000000000003,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1zCH931Y92kuk2$fXNuyut",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        9.114999999999998,
+                        0.115
+                    ],
+                    [
+                        10.124999999999998,
+                        0.115
+                    ],
+                    [
+                        10.124999999999998,
+                        0.165
+                    ],
+                    [
+                        10.094999999999999,
+                        0.185
+                    ],
+                    [
+                        9.144999999999998,
+                        0.185
+                    ],
+                    [
+                        9.114999999999998,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3$4PpNQdvBnvyT01Bska7y",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.115,
+                        0.115
+                    ],
+                    [
+                        6.125,
+                        0.11500000000000003
+                    ],
+                    [
+                        6.125,
+                        0.165
+                    ],
+                    [
+                        6.095000000000001,
+                        0.185
+                    ],
+                    [
+                        5.1450000000000005,
+                        0.185
+                    ],
+                    [
+                        5.115,
+                        0.165
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:3VgLa09cP8WwYjxnr$5_WT",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        6.859999999999999
+                    ],
+                    [
+                        0.11499999999999992,
+                        5.225
+                    ],
+                    [
+                        0.165,
+                        5.225
+                    ],
+                    [
+                        0.185,
+                        5.254999999999999
+                    ],
+                    [
+                        0.185,
+                        6.829999999999999
+                    ],
+                    [
+                        0.165,
+                        6.859999999999999
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1s1D$y0az5S9b5V92KKSJt",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.115,
+                        4.8149999999999995
+                    ],
+                    [
+                        0.11499999999999992,
+                        3.1799999999999997
+                    ],
+                    [
+                        0.165,
+                        3.1799999999999997
+                    ],
+                    [
+                        0.185,
+                        3.2099999999999995
+                    ],
+                    [
+                        0.185,
+                        4.784999999999999
+                    ],
+                    [
+                        0.165,
+                        4.8149999999999995
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1jnU8udTLBsxnPo8gKnqmp",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        3.1799999999999997
+                    ],
+                    [
+                        11.985,
+                        4.8149999999999995
+                    ],
+                    [
+                        11.934999999999999,
+                        4.8149999999999995
+                    ],
+                    [
+                        11.915,
+                        4.785
+                    ],
+                    [
+                        11.915,
+                        3.2099999999999995
+                    ],
+                    [
+                        11.934999999999999,
+                        3.1799999999999997
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:2QUso984LDhfsBczsoSz2v",
+        "type": "Window",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        11.985,
+                        5.225
+                    ],
+                    [
+                        11.985,
+                        6.859999999999999
+                    ],
+                    [
+                        11.934999999999999,
+                        6.859999999999999
+                    ],
+                    [
+                        11.915,
+                        6.83
+                    ],
+                    [
+                        11.915,
+                        5.255
+                    ],
+                    [
+                        11.934999999999999,
+                        5.225
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    }
+]

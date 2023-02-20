@@ -16,6 +16,12 @@
                 "urn:ngsi-ld:Zone:Test:SmartCitiesdomain:SmartBuildings:0aJ7egOIn66uiXCDk6uTq7"
             ]
         },
+	  "Devices": {
+            "type": "Relationship",
+            "object": [
+                "urn:ngsi-ld:thermometer:example:dw1ds245f01"
+            ]
+        },	
         "relativePosition": {
             "type": "Property",
             "value": {

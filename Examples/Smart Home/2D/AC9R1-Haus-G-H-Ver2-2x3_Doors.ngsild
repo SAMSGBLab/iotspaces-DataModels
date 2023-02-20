@@ -1,0 +1,1508 @@
+[
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:1H9GE43sT7Vv67x8Lw6Fp8",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        2.375,
+                        3.83
+                    ],
+                    [
+                        3.385,
+                        3.83
+                    ],
+                    [
+                        3.385,
+                        3.93
+                    ],
+                    [
+                        3.28668817,
+                        4.00918817
+                    ],
+                    [
+                        3.28253196,
+                        4.01237636
+                    ],
+                    [
+                        3.27769316,
+                        4.01438089
+                    ],
+                    [
+                        3.2729917,
+                        4.015
+                    ],
+                    [
+                        3.1770083,
+                        4.015
+                    ],
+                    [
+                        2.415,
+                        3.955
+                    ],
+                    [
+                        2.375,
+                        3.93
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3aqPtRqHv8FxklkAICc3jn",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.49,
+                        4.8149999999999995
+                    ],
+                    [
+                        6.49,
+                        3.8049999999999997
+                    ],
+                    [
+                        6.59,
+                        3.8049999999999997
+                    ],
+                    [
+                        6.66918817,
+                        3.9033118299999994
+                    ],
+                    [
+                        6.67237636,
+                        3.9074680399999995
+                    ],
+                    [
+                        6.67438089,
+                        3.9123068399999994
+                    ],
+                    [
+                        6.675,
+                        3.9170082999999996
+                    ],
+                    [
+                        6.675,
+                        4.0129917
+                    ],
+                    [
+                        6.615,
+                        4.7749999999999995
+                    ],
+                    [
+                        6.59,
+                        4.8149999999999995
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:1oFucrH_rBxeqJP$DO3JDZ",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.140000000000001,
+                        5.915
+                    ],
+                    [
+                        5.140000000000001,
+                        5.815
+                    ],
+                    [
+                        5.238311830000001,
+                        5.73581183
+                    ],
+                    [
+                        5.24246804,
+                        5.73262364
+                    ],
+                    [
+                        5.24730684,
+                        5.73061911
+                    ],
+                    [
+                        5.2520083,
+                        5.73
+                    ],
+                    [
+                        5.347991700000001,
+                        5.73
+                    ],
+                    [
+                        6.11,
+                        5.79
+                    ],
+                    [
+                        6.1499999999999995,
+                        5.815
+                    ],
+                    [
+                        6.15,
+                        5.915
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3JhxcU2P95DeUTv4mvvE2b",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        12.075000000000001,
+                        2.8970082999999995
+                    ],
+                    [
+                        12.075000000000001,
+                        2.9929916999999997
+                    ],
+                    [
+                        12.074380889,
+                        2.99769316
+                    ],
+                    [
+                        12.035,
+                        3.1099999999999994
+                    ],
+                    [
+                        11.985000000000001,
+                        3.1099999999999994
+                    ],
+                    [
+                        11.90762364,
+                        3.0025319599999998
+                    ],
+                    [
+                        11.905619110000002,
+                        2.99769316
+                    ],
+                    [
+                        11.905000000000001,
+                        2.9929916999999997
+                    ],
+                    [
+                        11.905000000000001,
+                        2.8970082999999995
+                    ],
+                    [
+                        11.965000000000002,
+                        2.1399999999999997
+                    ],
+                    [
+                        11.985000000000001,
+                        2.0999999999999996
+                    ],
+                    [
+                        12.035,
+                        2.0999999999999996
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2paGS1TDn7z8_xmzBloqQw",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        12.075000000000001,
+                        7.0370083
+                    ],
+                    [
+                        12.075000000000001,
+                        7.1329917
+                    ],
+                    [
+                        12.035,
+                        7.93
+                    ],
+                    [
+                        11.985000000000001,
+                        7.93
+                    ],
+                    [
+                        11.965000000000002,
+                        7.89
+                    ],
+                    [
+                        11.905000000000001,
+                        7.1329917
+                    ],
+                    [
+                        11.905000000000001,
+                        7.0370083
+                    ],
+                    [
+                        11.905619110000002,
+                        7.0323068399999995
+                    ],
+                    [
+                        11.90762364,
+                        7.02746804
+                    ],
+                    [
+                        11.985000000000001,
+                        6.92
+                    ],
+                    [
+                        12.035,
+                        6.92
+                    ],
+                    [
+                        12.074380889,
+                        7.0323068399999995
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:1_A2twge9Brf7NXNLX8bgE",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        7.25,
+                        10.395
+                    ],
+                    [
+                        7.25,
+                        11.405
+                    ],
+                    [
+                        7.15,
+                        11.405
+                    ],
+                    [
+                        7.125,
+                        11.365
+                    ],
+                    [
+                        7.065,
+                        10.6029917
+                    ],
+                    [
+                        7.065,
+                        10.507008299999999
+                    ],
+                    [
+                        7.06561911,
+                        10.50230684
+                    ],
+                    [
+                        7.06762364,
+                        10.49746804
+                    ],
+                    [
+                        7.07081183,
+                        10.493311833
+                    ],
+                    [
+                        7.15,
+                        10.394999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:15CGigCivEp9r7QNYoenMg",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.9,
+                        9.075000000000001
+                    ],
+                    [
+                        6.9,
+                        9.175
+                    ],
+                    [
+                        5.890000000000001,
+                        9.174999999999999
+                    ],
+                    [
+                        5.890000000000001,
+                        9.075000000000001
+                    ],
+                    [
+                        5.930000000000001,
+                        9.05
+                    ],
+                    [
+                        6.6920083,
+                        8.99
+                    ],
+                    [
+                        6.7879917,
+                        8.99
+                    ],
+                    [
+                        6.792693160000001,
+                        8.99061911
+                    ],
+                    [
+                        6.797531960000001,
+                        8.992623640000001
+                    ],
+                    [
+                        6.801688167,
+                        8.995811830000001
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:0vFlS6WtH9Xf6tyOfY88Ko",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.6850000000000005,
+                        10.495000000000001
+                    ],
+                    [
+                        5.6850000000000005,
+                        11.38
+                    ],
+                    [
+                        5.585000000000001,
+                        11.38
+                    ],
+                    [
+                        5.5600000000000005,
+                        11.340000000000002
+                    ],
+                    [
+                        5.500000000000001,
+                        10.702991700000002
+                    ],
+                    [
+                        5.500000000000001,
+                        10.6070083
+                    ],
+                    [
+                        5.500619110000001,
+                        10.60230684
+                    ],
+                    [
+                        5.50262364,
+                        10.59746804
+                    ],
+                    [
+                        5.505811830000001,
+                        10.593311833000001
+                    ],
+                    [
+                        5.585000000000001,
+                        10.495
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:10ELxINu1AtQJwHiDxs4mK",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        4.95,
+                        6.1894748
+                    ],
+                    [
+                        4.95,
+                        7.1994748
+                    ],
+                    [
+                        4.8500000000000005,
+                        7.1994748
+                    ],
+                    [
+                        4.77081183,
+                        7.10116297
+                    ],
+                    [
+                        4.76762364,
+                        7.09700676
+                    ],
+                    [
+                        4.76561911,
+                        7.09216796
+                    ],
+                    [
+                        4.765000000000001,
+                        7.0874665
+                    ],
+                    [
+                        4.765000000000001,
+                        6.9914831
+                    ],
+                    [
+                        4.825,
+                        6.2294748
+                    ],
+                    [
+                        4.8500000000000005,
+                        6.1894748
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:0r$LkJixbEmuopSiNiiNS9",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        2.235,
+                        4.805
+                    ],
+                    [
+                        2.235,
+                        5.6899999999999995
+                    ],
+                    [
+                        2.135,
+                        5.6899999999999995
+                    ],
+                    [
+                        2.11,
+                        5.6499999999999995
+                    ],
+                    [
+                        2.05,
+                        5.0129917
+                    ],
+                    [
+                        2.05,
+                        4.9170083
+                    ],
+                    [
+                        2.05061911,
+                        4.912306839999999
+                    ],
+                    [
+                        2.0526236399999997,
+                        4.9074680399999995
+                    ],
+                    [
+                        2.0558118299999997,
+                        4.903311833
+                    ],
+                    [
+                        2.135,
+                        4.804999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:0Sdxk$LWv3cQoNk4Racdid",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        0.28,
+                        3.9300000000000006
+                    ],
+                    [
+                        0.35,
+                        3.9300000000000006
+                    ],
+                    [
+                        0.37,
+                        3.9700000000000006
+                    ],
+                    [
+                        0.43,
+                        4.5770083
+                    ],
+                    [
+                        0.43,
+                        4.672991700000001
+                    ],
+                    [
+                        0.37,
+                        5.775
+                    ],
+                    [
+                        0.35,
+                        5.815
+                    ],
+                    [
+                        0.28,
+                        5.815
+                    ],
+                    [
+                        0.275,
+                        5.745
+                    ],
+                    [
+                        0.24,
+                        4.595000000000001
+                    ],
+                    [
+                        0.24,
+                        4.535
+                    ],
+                    [
+                        0.275,
+                        4.0
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3Vq9xrfMPANgeUaJXAbMWQ",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        12.075000000000001,
+                        4.147008199999999
+                    ],
+                    [
+                        12.075000000000001,
+                        4.2429916
+                    ],
+                    [
+                        12.074380889,
+                        4.24769306
+                    ],
+                    [
+                        12.035,
+                        4.359999899999999
+                    ],
+                    [
+                        11.985000000000001,
+                        4.359999899999999
+                    ],
+                    [
+                        11.90762364,
+                        4.2525318599999995
+                    ],
+                    [
+                        11.905619110000002,
+                        4.24769306
+                    ],
+                    [
+                        11.905000000000001,
+                        4.2429916
+                    ],
+                    [
+                        11.905000000000001,
+                        4.147008199999999
+                    ],
+                    [
+                        11.965000000000002,
+                        3.3899998999999994
+                    ],
+                    [
+                        11.985000000000001,
+                        3.3499998999999994
+                    ],
+                    [
+                        12.035,
+                        3.3499998999999994
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2jY$LzLBv2fhqX0XXb9eA5",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        12.075000000000001,
+                        5.787008199999999
+                    ],
+                    [
+                        12.075000000000001,
+                        5.882991599999999
+                    ],
+                    [
+                        12.035,
+                        6.6799998999999985
+                    ],
+                    [
+                        11.985000000000001,
+                        6.6799998999999985
+                    ],
+                    [
+                        11.965000000000002,
+                        6.6399998999999985
+                    ],
+                    [
+                        11.905000000000001,
+                        5.882991599999999
+                    ],
+                    [
+                        11.905000000000001,
+                        5.787008199999999
+                    ],
+                    [
+                        11.905619110000002,
+                        5.782306739999998
+                    ],
+                    [
+                        11.90762364,
+                        5.777467939999998
+                    ],
+                    [
+                        11.985000000000001,
+                        5.669999899999999
+                    ],
+                    [
+                        12.035,
+                        5.669999899999999
+                    ],
+                    [
+                        12.074380889,
+                        5.782306739999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3OcFrV1Kj78PI9wn7IF6nc",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        1.9999999999999998,
+                        3.79
+                    ],
+                    [
+                        1.9999999999999998,
+                        3.69
+                    ],
+                    [
+                        2.0983118299999997,
+                        3.61081183
+                    ],
+                    [
+                        2.1024680399999998,
+                        3.60762364
+                    ],
+                    [
+                        2.1073068399999997,
+                        3.60561911
+                    ],
+                    [
+                        2.1120083,
+                        3.605
+                    ],
+                    [
+                        2.2079917,
+                        3.605
+                    ],
+                    [
+                        2.8449999999999998,
+                        3.665
+                    ],
+                    [
+                        2.885,
+                        3.69
+                    ],
+                    [
+                        2.885,
+                        3.79
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:1unMG78dX3Fey69EJq9eqy",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.6500000000000004,
+                        5.1899999999999995
+                    ],
+                    [
+                        3.65,
+                        3.9299999999999997
+                    ],
+                    [
+                        3.75,
+                        3.9299999999999997
+                    ],
+                    [
+                        3.82918817,
+                        4.028311799999999
+                    ],
+                    [
+                        3.83237636,
+                        4.032468
+                    ],
+                    [
+                        3.83438089,
+                        4.0373068
+                    ],
+                    [
+                        3.835,
+                        4.042008299999999
+                    ],
+                    [
+                        3.835,
+                        4.1379917
+                    ],
+                    [
+                        3.775,
+                        5.1499999999999995
+                    ],
+                    [
+                        3.75,
+                        5.1899999999999995
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2GMYis9gn6txvJvxQe5fkJ",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        1.2749999999999984,
+                        6.055
+                    ],
+                    [
+                        1.2750000000000001,
+                        5.955
+                    ],
+                    [
+                        2.16,
+                        5.955
+                    ],
+                    [
+                        2.16,
+                        6.055
+                    ],
+                    [
+                        2.12,
+                        6.08
+                    ],
+                    [
+                        1.4829917000000001,
+                        6.14
+                    ],
+                    [
+                        1.3870083000000002,
+                        6.14
+                    ],
+                    [
+                        1.38230684,
+                        6.13938089
+                    ],
+                    [
+                        1.3774680400000001,
+                        6.13737636
+                    ],
+                    [
+                        1.373311833,
+                        6.13418817
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2MGvgriG51tun9I_T7PnV0",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        4.550000000000001,
+                        5.955
+                    ],
+                    [
+                        5.4350000000000005,
+                        5.955
+                    ],
+                    [
+                        5.4350000000000005,
+                        6.055
+                    ],
+                    [
+                        5.33668817,
+                        6.13418817
+                    ],
+                    [
+                        5.332531960000001,
+                        6.13737636
+                    ],
+                    [
+                        5.327693160000001,
+                        6.13938089
+                    ],
+                    [
+                        5.322991700000001,
+                        6.14
+                    ],
+                    [
+                        5.2270083000000005,
+                        6.14
+                    ],
+                    [
+                        4.590000000000001,
+                        6.08
+                    ],
+                    [
+                        4.550000000000001,
+                        6.055
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:201Qc$3Xr0jRZVpYfNk6F6",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.735,
+                        8.305
+                    ],
+                    [
+                        3.735,
+                        9.19
+                    ],
+                    [
+                        3.635,
+                        9.19
+                    ],
+                    [
+                        3.61,
+                        9.15
+                    ],
+                    [
+                        3.55,
+                        8.5129917
+                    ],
+                    [
+                        3.55,
+                        8.417008299999999
+                    ],
+                    [
+                        3.55061911,
+                        8.41230684
+                    ],
+                    [
+                        3.5526236399999997,
+                        8.40746804
+                    ],
+                    [
+                        3.5558118299999997,
+                        8.403311833
+                    ],
+                    [
+                        3.635,
+                        8.304999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2rlQw1_2zDAR_Fxn0NfG_O",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.489999999999999,
+                        4.635
+                    ],
+                    [
+                        6.489999999999999,
+                        3.75
+                    ],
+                    [
+                        6.589999999999999,
+                        3.75
+                    ],
+                    [
+                        6.669188169999999,
+                        3.8483118299999997
+                    ],
+                    [
+                        6.6723763599999995,
+                        3.8524680399999998
+                    ],
+                    [
+                        6.674380889999999,
+                        3.8573068399999997
+                    ],
+                    [
+                        6.674999999999999,
+                        3.8620083
+                    ],
+                    [
+                        6.674999999999999,
+                        3.9579917
+                    ],
+                    [
+                        6.614999999999999,
+                        4.595
+                    ],
+                    [
+                        6.589999999999999,
+                        4.635
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:1IlVuLqLj9_wq7eVEJ8uf2",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.735,
+                        5.71
+                    ],
+                    [
+                        3.735,
+                        6.595
+                    ],
+                    [
+                        3.635,
+                        6.595
+                    ],
+                    [
+                        3.61,
+                        6.555
+                    ],
+                    [
+                        3.55,
+                        5.9179917
+                    ],
+                    [
+                        3.55,
+                        5.8220083
+                    ],
+                    [
+                        3.55061911,
+                        5.81730684
+                    ],
+                    [
+                        3.5526236399999997,
+                        5.81246804
+                    ],
+                    [
+                        3.5558118299999997,
+                        5.808311833
+                    ],
+                    [
+                        3.635,
+                        5.709999999999998
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3JKIarNQX9IfcP4bAz2V1i",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        6.92,
+                        9.915000000000001
+                    ],
+                    [
+                        6.92,
+                        9.965
+                    ],
+                    [
+                        6.80769316,
+                        10.004380889
+                    ],
+                    [
+                        6.8029917,
+                        10.005
+                    ],
+                    [
+                        6.7070083,
+                        10.005
+                    ],
+                    [
+                        5.91,
+                        9.965
+                    ],
+                    [
+                        5.91,
+                        9.915000000000001
+                    ],
+                    [
+                        5.95,
+                        9.895000000000001
+                    ],
+                    [
+                        6.7070083,
+                        9.835
+                    ],
+                    [
+                        6.8029917,
+                        9.835
+                    ],
+                    [
+                        6.80769316,
+                        9.835619110000001
+                    ],
+                    [
+                        6.81253196,
+                        9.83762364
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3UHLEJm9n6XRL7bE8f95aq",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.9800000000000004,
+                        9.965
+                    ],
+                    [
+                        3.9800000000000004,
+                        9.915000000000001
+                    ],
+                    [
+                        4.08746804,
+                        9.83762364
+                    ],
+                    [
+                        4.09230684,
+                        9.835619110000001
+                    ],
+                    [
+                        4.097008300000001,
+                        9.835
+                    ],
+                    [
+                        4.1929917,
+                        9.835
+                    ],
+                    [
+                        4.95,
+                        9.895000000000001
+                    ],
+                    [
+                        4.99,
+                        9.915000000000001
+                    ],
+                    [
+                        4.99,
+                        9.965
+                    ],
+                    [
+                        4.1929917,
+                        10.005
+                    ],
+                    [
+                        4.097008300000001,
+                        10.005
+                    ],
+                    [
+                        4.09230684,
+                        10.004380889
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:3MBE02CfzAcvv01Hqx9yWA",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        4.049999999999999,
+                        7.384999999999999
+                    ],
+                    [
+                        4.050000000000001,
+                        7.284999999999999
+                    ],
+                    [
+                        4.9350000000000005,
+                        7.284999999999999
+                    ],
+                    [
+                        4.9350000000000005,
+                        7.384999999999999
+                    ],
+                    [
+                        4.8950000000000005,
+                        7.409999999999999
+                    ],
+                    [
+                        4.257991700000001,
+                        7.469999999999999
+                    ],
+                    [
+                        4.162008300000001,
+                        7.469999999999999
+                    ],
+                    [
+                        4.15730684,
+                        7.469380889999999
+                    ],
+                    [
+                        4.1524680400000005,
+                        7.467376359999999
+                    ],
+                    [
+                        4.148311833000001,
+                        7.464188169999999
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:111w8zK$T5Xv4cWfQ_wBSU",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        5.925000000000001,
+                        7.284999999999999
+                    ],
+                    [
+                        6.8100000000000005,
+                        7.284999999999999
+                    ],
+                    [
+                        6.8100000000000005,
+                        7.384999999999999
+                    ],
+                    [
+                        6.71168817,
+                        7.464188169999999
+                    ],
+                    [
+                        6.707531960000001,
+                        7.467376359999999
+                    ],
+                    [
+                        6.702693160000001,
+                        7.469380889999999
+                    ],
+                    [
+                        6.697991700000001,
+                        7.469999999999999
+                    ],
+                    [
+                        6.6020083000000005,
+                        7.469999999999999
+                    ],
+                    [
+                        5.965000000000001,
+                        7.409999999999999
+                    ],
+                    [
+                        5.925000000000001,
+                        7.384999999999999
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    },
+    {
+        "id": "urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:2YCf1x7gfBE9_7ibpO2Ymd",
+        "type": "Door",
+        "relativePosition": {
+            "type": "Property",
+            "value": {
+                "type": "Polygon",
+                "measurementUnit": "m",
+                "Dimensions": "2D",
+                "coordinates": [
+                    [
+                        3.61,
+                        3.725
+                    ],
+                    [
+                        3.61,
+                        4.61
+                    ],
+                    [
+                        3.51,
+                        4.61
+                    ],
+                    [
+                        3.485,
+                        4.57
+                    ],
+                    [
+                        3.425,
+                        3.9329917
+                    ],
+                    [
+                        3.425,
+                        3.8370083
+                    ],
+                    [
+                        3.42561911,
+                        3.83230684
+                    ],
+                    [
+                        3.4276236399999997,
+                        3.8274680400000003
+                    ],
+                    [
+                        3.4308118299999997,
+                        3.823311833
+                    ],
+                    [
+                        3.51,
+                        3.7249999999999983
+                    ]
+                ]
+            }
+        },
+        "@context": [
+            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        ]
+    }
+]

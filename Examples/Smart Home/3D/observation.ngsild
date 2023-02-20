@@ -1,0 +1,27 @@
+{
+    "id": "urn:ngsi-ld:Observation:example:obs314s12",
+    "type": "Observation",
+    "category": {
+      "type": "Property",
+      "value": "PhysicalObservation"
+    },
+    "measurement": {
+      "type": "Property",
+      "value": {"value":"34","Unit":"°C"}
+    },
+    "measurementType": {
+      "type": "Property",
+      "value": "Temperature"
+    },
+    "description": {
+      "type": "Property",
+      "value": {"Measurement of the temperature of a room"}
+    },
+    "Coverage": {
+      "type": "Property",
+      "value": {"65%"}
+    },
+    "@context": [
+      "https://raw.githubusercontent.com/AlexBorous/device_models_ngsi-ld/38969d8d7fce9f80533e33e63befe191ddfaebe5/context.json"
+    ]
+  }
