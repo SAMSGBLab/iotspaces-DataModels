@@ -3,307 +3,6 @@
     "$id": "urn:ngsi-ld:ModelSchema:modelschema-4345adb5-f2588f683a1c",
     "title": "Device entities in smart communities",
     "definitions": {
-        "Camera": {
-            "allOf": [{
-                "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/Camera/model.yaml"
-            }],
-            "type": "object",
-            "required": [
-                "id",
-                "type",
-                "controlledObservation",
-                "inSpace"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Camera"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be Camera"
-                },
-                "controlledObservation": {
-                    "type": "array",
-                    "enum": [
-                       "connectedDevices",
-                       "airPollution",
-                       "atmosphericPressure",
-                       "averageVelocity",
-                       "batteryLife",
-                       "batterySupply",
-                       "cdom",
-                       "conductance",
-                       "conductivity",
-                       "depth",
-                       "eatingActivity",
-                       "electricityConsumption",
-                       "energy",
-                       "fillingLevel",
-                       "freeChlorine",
-                       "gasConsumption",
-                       "gateOpening",
-                       "heading",
-                       "humidity",
-                       "light",
-                       "location",
-                       "milking",
-                       "motion",
-                       "movementActivity",
-                       "noiseLevel",
-                       "occupancy",
-                       "orp",
-                       "pH",
-                       "power",
-                       "precipitation",
-                       "pressure",
-                       "refractiveIndex",
-                       "salinity",
-                       "smoke",
-                       "soilMoisture",
-                       "solarRadiation",
-                       "speed",
-                       "tds",
-                       "temperature",
-                       "trafficFlow",
-                       "tss",
-                       "turbidity",
-                       "waterConsumption",
-                       "waterFlow",
-                       "waterLevel",
-                       "waterPollution",
-                       "weatherConditions",
-                       "weight",
-                       "windDirection",
-                       "windSpeed"
-                    ]
-                },
-                "observations": {
-                    "type": "array"
-                },
-                "inSpace": {
-                    "type": "string"
-                },
-                "accessMethod": {
-                    "type": "string",
-                    "enum": [
-                        "accessToken",
-                        "loginCredentials"
-                    ]
-                },
-                "coverage": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Polygon",
-                                "Point",
-                                "LineString",
-                                "MultiLineString"
-                            ]
-                        },
-                        "measurementUnit": {
-                            "type": "string",
-                            "default": "m"
-                        },
-                        "Dimensions": {
-                            "type": "string",
-                            "enum": [
-                                "2D"
-                            ],
-                            "default": "2D"
-                        },
-                        "coordinates": {
-                            "type": "array"
-                        }
-                    }
-                }
-            }
-        },
-        "Light-Bulb": {
-            "type": "object",
-            "required": [
-                "id",
-                "type",
-                "inSpace"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Light-Bulb"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be Light-Bulb"
-                },
-                "colourTemp": {
-                    "type": "integer"
-                },
-                "inSpace": {
-                    "type": "string"
-                },
-                "accessMethod": {
-                    "type": "string",
-                    "enum": [
-                        "accessToken",
-                        "loginCredentials"
-                    ]
-                },
-                "coverage": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Polygon",
-                                "Point",
-                                "LineString",
-                                "MultiLineString"
-                            ]
-                        },
-                        "measurementUnit": {
-                            "type": "string",
-                            "default": "m"
-                        },
-                        "Dimensions": {
-                            "type": "string",
-                            "enum": [
-                                "2D"
-                            ],
-                            "default": "2D"
-                        },
-                        "coordinates": {
-                            "type": "array"
-                        }
-                    }
-                }
-            }
-        },
-        "WiFi-Router": {
-            "type": "object",
-            "required": [
-                "id",
-                "type",
-                "controlledObservation",
-                "inSpace"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "WiFi-Router"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be WiFi-Router"
-                },
-                "controlledObservation": {
-                    "type": "array",
-                    "enum": [
-                       "connectedDevices",
-                       "airPollution",
-                       "atmosphericPressure",
-                       "averageVelocity",
-                       "batteryLife",
-                       "batterySupply",
-                       "cdom",
-                       "conductance",
-                       "conductivity",
-                       "depth",
-                       "eatingActivity",
-                       "electricityConsumption",
-                       "energy",
-                       "fillingLevel",
-                       "freeChlorine",
-                       "gasConsumption",
-                       "gateOpening",
-                       "heading",
-                       "humidity",
-                       "light",
-                       "location",
-                       "milking",
-                       "motion",
-                       "movementActivity",
-                       "noiseLevel",
-                       "occupancy",
-                       "orp",
-                       "pH",
-                       "power",
-                       "precipitation",
-                       "pressure",
-                       "refractiveIndex",
-                       "salinity",
-                       "smoke",
-                       "soilMoisture",
-                       "solarRadiation",
-                       "speed",
-                       "tds",
-                       "temperature",
-                       "trafficFlow",
-                       "tss",
-                       "turbidity",
-                       "waterConsumption",
-                       "waterFlow",
-                       "waterLevel",
-                       "waterPollution",
-                       "weatherConditions",
-                       "weight",
-                       "windDirection",
-                       "windSpeed"
-                    ]
-                },
-                "observations": {
-                    "type": "array"
-                },
-                "inSpace": {
-                    "type": "string"
-                },
-                "accessMethod": {
-                    "type": "string",
-                    "enum": [
-                        "accessToken",
-                        "loginCredentials"
-                    ]
-                },
-                "coverage": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Polygon",
-                                "Point",
-                                "LineString",
-                                "MultiLineString"
-                            ]
-                        },
-                        "measurementUnit": {
-                            "type": "string",
-                            "default": "m"
-                        },
-                        "Dimensions": {
-                            "type": "string",
-                            "enum": [
-                                "2D"
-                            ],
-                            "default": "2D"
-                        },
-                        "coordinates": {
-                            "type": "array"
-                        }
-                    }
-                }
-            }
-        },
         "Device": {
             "type": "object",
             "required": ["id", "type"],
@@ -317,6 +16,9 @@
                 "enum": ["Device"],
                 "description": "Property. NGSI Entity type. It has to be Device."
               },
+              "inSpace": {
+                "type": "array"
+              },
               "name": {
                 "type": "string"
               },
@@ -325,9 +27,227 @@
               },
               "observations": {
                 "type": "array"
-              }
+              },
+              "controlledActuation":{
+                "type": "array"
+              },
+              "actuations": {
+                "type": "array"
+              },
+              "deviceType": {
+                  "type": "string",
+                  "enum": ["sensor", "actuator", "sensorActuator"],
+                  "description": "Property. Indicates the type of the device: sensor, actuator or both"
+              },
+              "relativePosition": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Polygon",
+                            "Point",
+                            "LineString",
+                            "MultiLineString",
+                            "Trimesh"
+                        ]
+                    },
+                    "measurementUnit": {
+                        "type": "string",
+                        "default": "m"
+                    },
+                    "Dimensions": {
+                        "type": "string",
+                        "enum": [
+                            "2D",
+                            "3D"
+                        ],
+                        "default": "2D"
+                    },
+                    "coordinates": {
+                        "type": "array"
+                    },
+                    "faces": {
+                        "type": "array"
+                    }
+                }
+            }
             }
           },
+          "Smart-Light-Bulb": {
+            "type": "object",
+            "required": ["id", "type"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Smart-Light-Bulb"],
+                "description": "Property. NGSI Entity type. It has to be Smart-Light-Bulb."
+              },
+              "name": {
+                "type": "string"
+              },
+              "inSpace": {
+                "type": "array"
+              },
+              "diameter": {
+                "type": "string"
+              },
+              "fitting": {
+                "type": "string"
+              },
+              "formFactor": {
+                "type": "string"
+              },
+              "height": {
+                "type": "string"
+              },
+              "EnergyEfficiencyLabel": {
+                "type": "string"
+              },
+              "inputVoltage": {
+                "type": "string"
+              },
+              "wattageEquivalent": {
+                "type": "string"
+              },
+              "maxOperationPower": {
+                "type": "string"
+              },
+              "maxStandbyPower": {
+                "type": "string"
+              },
+              "ColorTemperature": {
+                "type": "string"
+              },
+              "lumenOutput": {
+                "type": "string"
+              },
+              "communicationProtocols": {
+                "type": "string"
+              },
+              "controlledObservation": {
+                "type": "array"
+              },
+              "observations": {
+                "type": "array"
+              },
+              "controlledActuation":{
+                "type": "array"
+              },
+              "actuations": {
+                "type": "array"
+              },
+              "deviceType": {
+                  "type": "string",
+                  "enum": ["sensor", "actuator", "sensorActuator"],
+                  "description": "Property. Indicates the type of the device: sensor, actuator or both"
+              },
+              "relativePosition": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Polygon",
+                            "Point",
+                            "LineString",
+                            "MultiLineString",
+                            "Trimesh"
+                        ]
+                    },
+                    "measurementUnit": {
+                        "type": "string",
+                        "default": "m"
+                    },
+                    "Dimensions": {
+                        "type": "string",
+                        "enum": [
+                            "2D",
+                            "3D"
+                        ],
+                        "default": "2D"
+                    },
+                    "coordinates": {
+                        "type": "array"
+                    },
+                    "faces": {
+                        "type": "array"
+                    }
+                }
+            }
+            }
+          },
+          "Smart-Thermostat": {
+            "type": "object",
+            "required": ["id", "type"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Smart-Thermostat"],
+                "description": "Property. NGSI Entity type. It has to be Smart-Thermostat."
+              },
+              "inSpace": {
+                "type": "array"
+              },
+              "name": {
+                "type": "string"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "temperature": {
+                "type": "number"
+              },
+              "humidity": {
+                "type": "number"
+              },
+              "mode": {
+                "type": "string",
+                "enum": ["off", "cool", "heat", "auto"]
+              },
+              "away": {
+                "type": "boolean"
+              },
+              "connectivityType": {
+                "type": "string",
+                "enum": ["Wi-Fi", "Zigbee", "Z-Wave", "Bluetooth", "other"],
+                "description": "The type of connectivity used by the Smart-Thermostat."
+              },
+              "firmwareVersion": {
+                "type": "string",
+                "description": "The current firmware version of the Smart-Thermostat."
+              },
+              "batteryLevel": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "The battery level of the Smart-Thermostat as a percentage (0-100)."
+              },
+              "controlledObservation": {
+                "type": "array"
+              },
+              "observations": {
+                "type": "array"
+              },
+              "controlledActuation": {
+                "type": "array"
+              },
+              "actuations": {
+                "type": "array"
+              }
+            }
+          },    
         "Observation": {
             "type": "object",
             "required": ["id", "type"],
@@ -370,9 +290,54 @@
               }
             }
           },
+          "Actuation":{
+            "type": "object",
+            "required": ["id", "type"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["Actuation"],
+                "description": "Property. NGSI Entity type. It has to be Actuation."
+              },
+              "name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "dateModified": {
+                "type": "string"
+              },
+              "actuation": {
+                "type": "object",
+                "required": ["command"],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "command": {
+                    "type": "string",
+                    "description": "The command to be executed."
+                  },
+                  "commandResult": {
+                    "type": "string",
+                    "description": "The result of the command execution."
+                  },
+                  "duration": {
+                    "type": "number",
+                    "description": "The time it took to execute the command in seconds."
+                  }
+                }
+              }
+            }
+          },
         "Bin": {
             "type": "object",
-            "required": ["id", "type", "relativePosition"],
+            "required": ["id", "type"],
             "properties": {
               "id": {
                 "type": "string",
