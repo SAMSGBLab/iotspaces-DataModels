@@ -36,6 +36,10 @@
         "BinRecommendedLoad": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#binRecommendedLoad",
         "BinFull": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#binFull",
         "status": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#status",
-        "storedItems": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#storedItems"
+        "storedItems": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#storedItems",
+        "away": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#away",
+        "connectivityType": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#connectivityType",
+        "firmwareVersion": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#firmwareVersion",
+        "batteryLevel": "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/type-definition.json#batteryLevel"
     }
 }

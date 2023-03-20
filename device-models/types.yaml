@@ -449,6 +449,15 @@ components:
         type: array
         x-ngsi:
           type: Relationship
+      deviceType:
+        description: "Property. Indicates the type of the device: sensor, actuator, or both"
+          enum:
+            - sensor
+            - actuator
+            - sensorActuator
+        type: string
+        x-ngsi:
+          type: Property    
       relativePosition:
           description: "This property that describes the relative position of a device in a 2D space. This can be a Point, LineString, MultiLineString, Polygon or Trimesh"
           type: object

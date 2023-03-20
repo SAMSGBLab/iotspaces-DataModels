@@ -245,7 +245,45 @@
               },
               "actuations": {
                 "type": "array"
-              }
+              },
+              "deviceType": {
+                  "type": "string",
+                  "enum": ["sensor", "actuator", "sensorActuator"],
+                  "description": "Property. Indicates the type of the device: sensor, actuator or both"
+              },
+              "relativePosition": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Polygon",
+                            "Point",
+                            "LineString",
+                            "MultiLineString",
+                            "Trimesh"
+                        ]
+                    },
+                    "measurementUnit": {
+                        "type": "string",
+                        "default": "m"
+                    },
+                    "Dimensions": {
+                        "type": "string",
+                        "enum": [
+                            "2D",
+                            "3D"
+                        ],
+                        "default": "2D"
+                    },
+                    "coordinates": {
+                        "type": "array"
+                    },
+                    "faces": {
+                        "type": "array"
+                    }
+                }
+            }
             }
           },    
         "Observation": {
