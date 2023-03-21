@@ -1,0 +1,76 @@
+{
+    "id": "urn:ngsi-ld:NestLearningThermostat:001",
+    "type": "Smart-Thermostat",
+    "name": {
+      "type": "Property",
+      "value": "Nest Learning Thermostat"
+    },
+    "manufacturer": {
+      "type": "Property",
+      "value": "Nest"
+    },
+    "model": {
+      "type": "Property",
+      "value": "Learning Thermostat"
+    },
+    "mode": {
+      "type": "Property",
+      "value": "auto"
+    },
+    "away": {
+      "type": "Property",
+      "value": false
+    },
+    "connectivityType": {
+      "type": "Property",
+      "value": "Wi-Fi"
+    },
+    "firmwareVersion": {
+      "type": "Property",
+      "value": "3.1.2"
+    },
+    "batteryLevel": {
+      "type": "Property",
+      "value": 100
+    },
+    "controlledObservation": {
+      "type": "Property",
+      "value": ["temperature"]
+    },
+    "controlledActuation": {
+      "type": "Property",
+      "value": ["temperature"]
+    },
+    "deviceType": {
+      "type": "Property",
+      "value": "sensorActuator"
+    },
+    "inSpace": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp"]
+    },
+    "observations": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:TemperatureObservation:001"]
+    },
+    "actuations": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:TemperatureActuation:001"]
+    },
+    "relativePosition": {
+      "type": "Property",
+      "value": {
+        "type": "Point",
+        "measurementUnit": "m",
+        "Dimensions": "2D",
+        "coordinates": [
+            4.134999328882714,
+            8.55721885373461
+          ]
+      }
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+    ]
+  }

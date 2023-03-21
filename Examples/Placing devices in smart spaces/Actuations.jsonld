@@ -1,0 +1,59 @@
+[
+{
+	"id": "urn:ngsi-ld:Actuation:HueLamp:001",
+	"type": "Actuation",
+	"name": {
+		"type": "Property",
+		"value": "Turn off Living Room Lamp"
+	},
+	"category": {
+    "type": "Property",
+    "value": "PhysicalActuation"
+  },
+	"dateModified": {
+		"type": "Property",
+		"value": "2023-03-20T18:10:30Z"
+	},
+	"actuation": {
+		"type": "Property",
+		"value": {
+			"command": "off",
+			"commandResult": "success",
+			"duration": 0.5
+		}
+	},
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+  ]
+},
+{
+    "id": "urn:ngsi-ld:TemperatureActuation:001",
+    "type": "Actuation",
+    "name": {
+      "type": "Property",
+      "value": "Nest Thermostat Temperature Actuation"
+    },
+    "category": {
+      "type": "Property",
+      "value": "PhysicalActuation"
+    },
+    "dateModified": {
+      "type": "Property",
+      "value": "2023-03-21T12:05:00Z"
+    },
+    "actuation": {
+      "type": "Property",
+      "value": {
+        "type": "Command",
+        "command": "setTemperature",
+        "commandResult": "success",
+        "duration": 5
+      }
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+    ]
+  }
+]

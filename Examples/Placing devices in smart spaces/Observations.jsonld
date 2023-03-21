@@ -1,0 +1,68 @@
+[
+    {
+        "id": "urn:ngsi-ld:Observation:HueLamp:001",
+        "type": "Observation",
+        "name": {
+            "type": "Property",
+            "value": "Brightness measurement of Living Room Lamp"
+        },
+        "category": {
+        "type": "Property",
+        "value": "PhysicalObservation"
+      },
+        "dateModified": {
+            "type": "Property",
+            "value": "2023-03-20T18:20:30Z"
+        },
+        "measurement": {
+            "type": "Property",
+            "value": {
+                "brightness": {
+                    "type": "Property",
+                    "value": 0,
+                    "measurementUnit": "%"
+                }
+            }
+        },
+      "measurementType": {
+        "type": "Property",
+        "value": "light"
+      },
+      "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+      ]
+    },
+    {
+        "id": "urn:ngsi-ld:TemperatureObservation:001",
+        "type": "Observation",
+        "name": {
+          "type": "Property",
+          "value": "Nest Thermostat Temperature Observation"
+        },
+        "category": {
+          "type": "Property",
+          "value": "PhysicalObservation"
+        },
+        "dateModified": {
+          "type": "Property",
+          "value": "2023-03-21T12:00:00Z"
+        },
+        "measurement": {
+          "type": "Property",
+          "value": {
+            "type": "Number",
+            "value": 22.5,
+            "measurementUnit": "C"
+          }
+        },
+        "measurementType": {
+          "type": "Property",
+          "value": "temperature"
+        },
+        "@context": [
+          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+          "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+        ]
+      }
+]

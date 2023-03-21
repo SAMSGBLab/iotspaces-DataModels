@@ -1,0 +1,98 @@
+{
+    "id": "urn:ngsi-ld:Smart-Light-Bulb:Philips-Hue-12345",
+    "type": "Smart-Light-Bulb",
+    "name": {
+      "type": "Property",
+      "value": "Philips Hue Lamp"
+    },
+    "inSpace": {
+        "type": "Relationship",
+        "object": ["urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp"]
+    },
+    "diameter": {
+      "type": "Property",
+      "value": "60mm"
+    },
+    "fitting": {
+      "type": "Property",
+      "value": "E27"
+    },
+    "formFactor": {
+      "type": "Property",
+      "value": "A19"
+    },
+    "height": {
+      "type": "Property",
+      "value": "110mm"
+    },
+    "EnergyEfficiencyLabel": {
+      "type": "Property",
+      "value": "A+"
+    },
+    "inputVoltage": {
+      "type": "Property",
+      "value": "220-240V"
+    },
+    "wattageEquivalent": {
+      "type": "Property",
+      "value": "60W"
+    },
+    "maxOperationPower": {
+      "type": "Property",
+      "value": "10W"
+    },
+    "maxStandbyPower": {
+      "type": "Property",
+      "value": "0.5W"
+    },
+    "ColorTemperature": {
+      "type": "Property",
+      "value": "2700K"
+    },
+    "lumenOutput": {
+      "type": "Property",
+      "value": "806lm"
+    },
+    "communicationProtocols": {
+      "type": "Property",
+      "value": "Zigbee"
+    },
+    "controlledObservation": {
+        "type": "Property",
+        "value": ["light"]
+      },
+      "observations": {
+        "type": "Relationship",
+        "object": ["urn:ngsi-ld:Observation:HueLamp:001"]
+      },
+      "controlledActuation": {
+        "type": "Property",
+        "value": ["light"]
+      },
+      "actuations": {
+        "type": "Relationship",
+        "object": ["urn:ngsi-ld:Actuation:HueLamp:001"]
+      },
+    "deviceType": {
+      "type": "Property",
+      "value": "sensorActuator"
+    },
+    "relativePosition": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "measurementUnit": "m",
+            "Dimensions": "2D",
+            "coordinates": [
+                [
+                0.5902403352209831,
+                6.218615800819805
+                ]
+            ]
+        }
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/device-models/context.json"
+    ]
+  }

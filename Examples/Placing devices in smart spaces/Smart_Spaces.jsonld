@@ -1,0 +1,139 @@
+[{
+	"id": "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:1OKccvw796O94cljFtqofp",
+	"type": "Room",
+	"name": {
+		"type": "Property",
+		"value": "K-3"
+	},
+	"onFloor": {
+		"type": "Relationship",
+		"object": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:38vC2rMpPDpQ1cy52XqxrF"
+	},
+	"Devices": {
+		"type": "Relationship",
+		"object": [
+			"urn:ngsi-ld:thermometer:example:dw1ds245f01"
+		]
+	},
+	"relativePosition": {
+		"type": "Property",
+		"value": {
+			"type": "Polygon",
+			"measurementUnit": "m",
+			"Dimensions": "2D",
+			"coordinates": [
+				[
+					0.35,
+					9.68
+				],
+				[
+					3.575,
+					9.68
+				],
+				[
+					3.575,
+					9.075
+				],
+				[
+					4.85,
+					9.075
+				],
+				[
+					4.85,
+					6.055
+				],
+				[
+					0.35,
+					6.055
+				],
+				[
+					0.35,
+					9.68
+				]
+			]
+		}
+	},
+	"DoorsInRoom": {
+		"type": "Relationship",
+		"object": [
+			"urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:10ELxINu1AtQJwHiDxs4mK"
+		]
+	},
+	"windowsInRoom": {
+		"type": "Relationship",
+		"object": [
+			"urn:ngsi-ld:Window:Test:SmartCitiesdomain:SmartBuildings:1romkx9sb2mfYEttxEHWPc"
+		]
+	},
+	"numberOfDoors": {
+		"type": "Property",
+		"value": 1
+	},
+	"numberOfWindows": {
+		"type": "Property",
+		"value": 1
+	},
+	"@context": [
+		"https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+	]
+}, {
+	"id": "urn:ngsi-ld:Room:Test:SmartCitiesdomain:SmartBuildings:2FTyCaX9v8nfCZuxbRfoI5",
+	"type": "Room",
+	"name": {
+		"type": "Property",
+		"value": "K-9"
+	},
+	"onFloor": {
+		"type": "Relationship",
+		"object": "urn:ngsi-ld:Floor:Test:SmartCitiesdomain:SmartBuildings:38vC2rMpPDpQ1cy52XqxrF"
+	},
+	"relativePosition": {
+		"type": "Property",
+		"value": {
+			"type": "Polygon",
+			"measurementUnit": "m",
+			"Dimensions": "2D",
+			"coordinates": [
+				[
+					0.35,
+					5.815
+				],
+				[
+					2.135,
+					5.815
+				],
+				[
+					2.135,
+					3.9300000000000006
+				],
+				[
+					0.35,
+					3.9300000000000006
+				],
+				[
+					0.35,
+					5.815
+				]
+			]
+		}
+	},
+	"DoorsInRoom": {
+		"type": "Relationship",
+		"object": [
+			"urn:ngsi-ld:Door:Test:SmartCitiesdomain:SmartBuildings:0r$LkJixbEmuopSiNiiNS9"
+		]
+	},
+	"numberOfDoors": {
+		"type": "Property",
+		"value": 1
+	},
+	"numberOfWindows": {
+		"type": "Property",
+		"value": 0
+	},
+	"@context": [
+		"https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+	]
+}]
