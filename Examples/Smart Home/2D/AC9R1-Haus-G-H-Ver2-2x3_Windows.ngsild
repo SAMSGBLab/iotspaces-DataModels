@@ -41,7 +41,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -87,7 +87,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -133,7 +133,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -179,7 +179,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -225,7 +225,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -271,7 +271,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -317,7 +317,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -363,7 +363,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -409,7 +409,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -455,7 +455,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -501,7 +501,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -547,7 +547,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -593,7 +593,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -639,7 +639,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -685,7 +685,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -731,7 +731,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -777,7 +777,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -823,7 +823,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -869,7 +869,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -915,7 +915,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -961,7 +961,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1007,7 +1007,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1053,7 +1053,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1099,7 +1099,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1145,7 +1145,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1191,7 +1191,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1237,7 +1237,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1283,7 +1283,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1329,7 +1329,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1375,7 +1375,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1421,7 +1421,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1467,7 +1467,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1513,7 +1513,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1559,7 +1559,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     },
@@ -1605,7 +1605,7 @@
             }
         },
         "@context": [
-            "https://gitlab.isl.ics.forth.gr/api/v4/projects/82/repository/files/ngsild-models%2FBuilding%2Fcontext.json/raw",
+            "https://raw.githubusercontent.com/SAMSGBLab/iotspaces-DataModels/main/Building/context.json,
             "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
         ]
     }
