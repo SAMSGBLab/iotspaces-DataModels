@@ -1,0 +1,133 @@
+ServiceAlert:
+  description: "The data model is a general description of a ServiceAlert"
+  properties:
+    alternateName:
+      description: An alternative name for this item
+      type: string
+      x-ngsi:
+        type: Property
+    description:
+      description: A description of this item
+      type: string
+      x-ngsi:
+        type: Property
+    id:
+      anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      description: Unique identifier of the entity
+      x-ngsi:
+        type: Property
+    name:
+      description: The name of this item.
+      type: string
+      x-ngsi:
+        type: Property
+    type:
+      description: NGSI Entity type. It has to be TransportStation
+      enum:
+        - BusPosition
+      type: string
+      x-ngsi:
+        type: Property
+    active_period:
+      type: object
+      properties:
+        start:
+          type: number
+        end:
+          type: number
+    informed_entity:
+      type: object
+      properties:
+        agency_id:
+          type: string
+	  format: uri
+        route_id:
+          type: string
+	  format: uri
+        route_type:
+          type: number
+        trip:
+          type: object
+          properties:
+            trip_id:
+              type: string
+              format: uri
+            route_id:
+              type: string
+              format: uri
+            direction_id:
+              type: number
+            start_time:
+              type: string
+            start_date:
+              type: string
+            schedule_relationship:
+              type: string
+              enum:
+                - SCHEDULED
+                - ADDED
+                - UNSCHEDULED
+                - CANCELED
+                - REPLACEMENT
+                - DUPLICATED
+        stop_id:
+          type: string
+          format: uri
+    cause:
+      type: string
+      enum:
+        - OTHER_CAUSE
+        - STRIKE
+        - DEMONSTRATION
+    effect:
+      type: string
+      enum:
+        - SIGNIFICANT_DELAYS
+    url:
+      type: object
+      properties:
+        translation:
+          type: object
+          properties:
+            text:
+              type: string
+            language:
+              type: string
+    header_text:
+      type: object
+      properties:
+        translation:
+          type: object
+          properties:
+            text:
+              type: string
+            language:
+              type: string
+    description_text:
+      type: object
+      properties:
+        translation:
+          type: object,
+          properties: 
+            text: 
+              type: string
+            language: 
+              type: string
+  required:
+    - id
+    - type
+  type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json
+  x-model-tags: ""
+  x-version: 0.1.3

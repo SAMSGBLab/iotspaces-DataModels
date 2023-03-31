@@ -1,0 +1,158 @@
+TripUpdate:
+  description: "The data model is a general description of a FeedMessage"
+  properties:
+    alternateName:
+      description: An alternative name for this item
+      type: string
+      x-ngsi:
+        type: Property
+    description:
+      description: A description of this item
+      type: string
+      x-ngsi:
+        type: Property
+    id:
+      anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      description: Unique identifier of the entity
+      x-ngsi:
+        type: Property
+    name:
+      description: The name of this item.
+      type: string
+      x-ngsi:
+        type: Property
+    type:
+      description: NGSI Entity type. It has to be TransportStation
+      enum:
+        - BusPosition
+      type: string
+      x-ngsi:
+        type: Property
+    trip:
+        type: object
+        properties:
+            trip_id:
+              type: string
+              format: uri
+              x-ngsi:
+                type: Property
+            route_id:
+              type: string
+              format: uri
+              x-ngsi:
+                type: Property
+            direction_id:
+              type: number
+              x-ngsi:
+                type: Property
+            start_time:
+              type: string
+              x-ngsi:
+                type: Property
+            start_date:
+              type: string
+              x-ngsi:
+                type: Property
+            schedule_relationship:
+              type: string
+              enum:
+                - SCHEDULED
+                - ADDED
+                - UNSCHEDULED
+                - CANCELED
+                - REPLACEMENT
+                - DUPLICATED
+              x-ngsi:
+                type: Property
+    bus:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uri
+          x-ngsi:
+            type: Property
+        label:
+          type: string
+          x-ngsi:
+            type: Property
+        license_plate:{
+          type: string
+          x-ngsi:
+            type: Property
+    stop_time_update:
+      type: array
+      items:
+        type: object
+        properties:
+          stop_sequence:
+            type: number
+            x-ngsi:
+              type: Property
+          stop_id:
+            type: string
+            format: uri
+            x-ngsi:
+              type: Property
+          arrival:
+            type: object
+            properties:
+             delay:
+              type: number
+              x-ngsi:
+                type: Property
+             time:
+              type: number
+              x-ngsi:
+                type: Property
+             uncertainty:
+              type: number
+              x-ngsi:
+                type: Property
+        departure:
+          type: object
+          properties:
+           delay:
+            type: number
+            x-ngsi:
+              type: Property
+           time:
+            type:number
+            x-ngsi:
+              type: Property
+           uncertainty:
+            type:number
+            x-ngsi:
+              type: Property
+        schedule_relationship:
+          type: string
+          enum:
+            - SCHEDULED
+            - ADDED
+            - UNSCHEDULED
+            - CANCELED
+            - REPLACEMENT
+            - DUPLICATED
+          default: SCHEDULED
+          x-ngsi:
+            type: Property
+    timestamp:
+      type: number
+  required:
+    - id
+    - type
+  type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json
+  x-model-tags: ""
+  x-version: 0.1.3
