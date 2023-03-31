@@ -43,7 +43,7 @@ components:
           type: string
           x-ngsi:
             type: Property
-        Interests:
+        email:
           description: "Email used by passenger account"
           type: string
           x-ngsi:
@@ -245,12 +245,12 @@ components:
            x-ngsi:
             type: Property
         isForNow:
-            type: boolean
-            x-ngsi:
+          type: boolean
+          x-ngsi:
             type: Property
         isRepeated:
-            type: boolean
-            x-ngsi:
+          type: boolean
+          x-ngsi:
             type: Property
         Passenger:
           description: "The id of the passenger this passenger_intention entity refers to"
