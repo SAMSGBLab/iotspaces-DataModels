@@ -1,0 +1,69 @@
+BusStationArea:
+  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  properties:
+    id:
+      anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      description: Unique identifier of the entity
+      x-ngsi:
+        type: Property
+    name:
+      description: The name of this item.
+      type: string
+      x-ngsi:
+        type: Property
+    previousLocation:
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof
+      x-ngsi:
+        type: GeoProperty
+    type:
+      description: NGSI Entity type. It has to be BusStationArea 
+      enum:
+        - Vehicle
+      type: string
+      x-ngsi:
+        type: Property
+    relativePosition:
+        type: object
+        properties:
+            type:
+                type: string,
+                enum:
+                    - Polygon
+                    - Point
+                    - LineString
+                    - MultiLineString
+                    - Trimesh
+            measurementUnit:
+                type: string
+                default: m
+            Dimensions:
+                type: string
+                enum: 
+                    - 2D
+                    - 3D
+                default: 2D
+            coordinates:
+                type: array
+            faces:
+                type: array
+      Observations:
+        type: array
+  required:
+    - id
+    - type
+  type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
+  x-model-tags: IUDX
+  x-version: 0.2.1
