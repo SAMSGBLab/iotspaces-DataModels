@@ -1,74 +1,43 @@
 BusArea:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
   properties:
-    alternateName:
-      description: An alternative name for this item
-      type: string
-      x-ngsi:
-        type: Property
     id:
-      anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: Property. Identifier format of any NGSI entity
-          format: uri
-          type: string
-      description: Unique identifier of the entity
-      x-ngsi:
-        type: Property
+        type: string
+        format: uri
     type:
-      description: NGSI Entity type. It has to be BusArea 
-      enum:
-        - BusArea 
+        type: string
+        enum:
+            - BusArea
+        description: "Property. NGSI Entity type. It has to be BusArea"
+    name:
       type: string
-      x-ngsi:
-        type: Property
     relativePosition:
-        description: Position relatively to the Bus
-        type: object 
-        properties:
-          type: 
+      type: object
+      properties:
+          type:
               type: string
-              enum: 
-                - Polygon
-                - Point
-                - LineString
-                - MultiLineString
-                - Trimesh
-              ]
-              x-ngsi:
-                type: Property
+              enum:
+                  - Polygon
+                  - Point
+                  - LineString
+                  - MultiLineString
+                  - Trimesh
           measurementUnit:
               type: string
               default: m
-              x-ngsi:
-                type: Property
           Dimensions:
               type: string
-              enum: 
-                - 2D
-                - 3D
+              enum:
+                  - 2D
+                  - 3D
               default: 2D
-              x-ngsi:
-                type: Property
-          coordinates: 
+          coordinates:
               type: array
-              x-ngsi:
-                type: Property
-          faces: 
+          faces:
               type: array
-              x-ngsi:
-                type: Property
+    Observations:
+      type: array
   required:
     - id
     - type
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
-  x-model-tags: IUDX
-  x-version: 0.2.1
