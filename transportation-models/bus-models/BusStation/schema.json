@@ -295,6 +295,19 @@
       }
     }
   ],
+  "busExtent": {
+      "type": "object",
+      "properties": {
+          "type": {
+              "type": "string",
+              "enum": [
+                  "Polygon",
+                  "Point",
+                  "LineString",
+                  "MultiLineString",
+                  "Trimesh"
+              ]
+  },
   "hasAvailableAreas":{
     "type": "array"
   },
