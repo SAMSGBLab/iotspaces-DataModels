@@ -32,7 +32,7 @@
 	}
     },
     "hasFeedEntity":{
-	    "type":": "array"
+	    "type": "array"
     },
 
     "required": [
