@@ -295,7 +295,7 @@
       }
     }
   ],
-  "busExtent": {
+  "busStationExtent": {
       "type": "object",
       "properties": {
           "type": {
