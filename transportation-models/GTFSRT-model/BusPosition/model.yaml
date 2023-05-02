@@ -1,149 +1,82 @@
 BusLocation:
   description: "The data model is a general description of a bus location"
   properties:
-    alternateName:
-      description: An alternative name for this item
-      type: string
-      x-ngsi:
-        type: Property
-    description:
-      description: A description of this item
-      type: string
-      x-ngsi:
-        type: Property
     id:
-      anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: Property. Identifier format of any NGSI entity
-          format: uri
-          type: string
-      description: Unique identifier of the entity
-      x-ngsi:
-        type: Property
-    name:
-      description: The name of this item.
       type: string
-      x-ngsi:
-        type: Property
+      format: uri
     type:
-      description: NGSI Entity type. It has to be TransportStation
-      enum:
-        - BusPosition
       type: string
-      x-ngsi:
-        type: Property
+      enum:
+          - BusPosition
+      description: "Property. NGSI Entity type. It has to be BusPosition"
     trip:
         type: object
         properties:
             trip_id:
               type: string
               format: uri
-              x-ngsi:
-                type: Property
             route_id:
               type: string
               format: uri
-              x-ngsi:
-                type: Property
             direction_id:
               type: number
-              x-ngsi:
-                type: Property
             start_time:
                 type: string
-                x-ngsi:
-                  type: Property
             start_date:
               type: string
-              x-ngsi:
-                type: Property
             schedule_relationship:
               type: string
-              enum: 
-                - SCHEDULED
-                - ADDED
-                - UNSCHEDULED
-                - CANCELED
-                - REPLACEMENT
-                - DUPLICATED
-              x-ngsi:
-                type: Property
-
+              enum:
+                  - SCHEDULED
+                  - ADDED
+                  - UNSCHEDULED
+                  - CANCELED
+                  - REPLACEMENT
+                  - DUPLICATED
     bus:
       type: object
       properties:
         id:
           type: string
           format: uri
-         x-ngsi:
-           type: Property
         label:
           type: string
-          x-ngsi:
-            type: Property
         license_plate:
           type: string
-          x-ngsi:
-            type: Property
     position:
 	type: object
 	properties:
 		latitude:
 			type: float
-                        x-ngsi:
-                          type: Property
 		longtitude:
 			type: float
-                        x-ngsi:
-                          type: Property
 		bearing:
 			type: float
-                        x-ngsi:
-                          type: Property
 		odometer:
 			type: double
-                        x-ngsi:
-                          type: Property
 		speed:
 			type: double
-                        x-ngsi:
-                          type: Property
-
     current_stop_sequence:
       type: integer
-      x-ngsi:
-        type: Property
     stop_id:
       type: string
       format: uri
-      x-ngsi:
-        type: Property
     current_status:
       type: string
       enum:
-        - INCOMING_AT
-        - STOPPED_AT
-        - IN_TRANSIT_TO
-      x-ngsi:
-        type: Property
+	- INCOMING_AT
+	- STOPPED_AT
+	- IN_TRANSIT_TO
     timestamp:
 	    type: number
-            x-ngsi:
-              type: Property
     congestion_level:
 	    type: string
 	    enum:
-              - SEVERE_CONGESTION
-              - RUNNING_SMOOTHLY
-              - STOP_AND_GO
-              - CONGESTION
-              - SEVERE_CONGESTION
-            x-ngsi:
-              type: Property
+		    - SEVERE_CONGESTION
+		    - RUNNING_SMOOTHLY
+		    - STOP_AND_GO
+		    - CONGESTION
+		    - SEVERE_CONGESTION
   required:
     - id
     - type
