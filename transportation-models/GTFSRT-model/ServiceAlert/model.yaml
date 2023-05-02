@@ -1,52 +1,25 @@
 ServiceAlert:
   description: "The data model is a general description of a ServiceAlert"
   properties:
-    alternateName:
-      description: An alternative name for this item
-      type: string
-      x-ngsi:
-        type: Property
-    description:
-      description: A description of this item
-      type: string
-      x-ngsi:
-        type: Property
     id:
-      anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: Property. Identifier format of any NGSI entity
-          format: uri
-          type: string
-      description: Unique identifier of the entity
-      x-ngsi:
-        type: Property
-    name:
-      description: The name of this item.
       type: string
-      x-ngsi:
-        type: Property
+      format: uri
     type:
-      description: NGSI Entity type. It has to be TransportStation
-      enum:
-        - BusPosition
       type: string
-      x-ngsi:
-        type: Property
+      enum:
+        - ServiceAlert
+      description: "Property. NGSI Entity type. It has to be ServiceAlert"
     active_period:
       type: object
       properties:
         start:
           type: number
-        end:
+        end: 
           type: number
     informed_entity:
       type: object
-      properties:
-        agency_id:
+      properties: 
+        agency_id: 
           type: string
 	  format: uri
         route_id:
@@ -69,7 +42,7 @@ ServiceAlert:
               type: string
             start_date:
               type: string
-            schedule_relationship:
+            schedule_relationship: 
               type: string
               enum:
                 - SCHEDULED
@@ -89,7 +62,7 @@ ServiceAlert:
         - DEMONSTRATION
     effect:
       type: string
-      enum:
+      enum: 
         - SIGNIFICANT_DELAYS
     url:
       type: object
@@ -115,11 +88,11 @@ ServiceAlert:
       type: object
       properties:
         translation:
-          type: object,
-          properties: 
+          type: object
+          properties:
             text: 
               type: string
-            language: 
+            language:
               type: string
   required:
     - id
