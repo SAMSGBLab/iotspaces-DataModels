@@ -50,16 +50,7 @@
           "items": {
             "type": "string",
             "enum": [
-              "aerialLift",
               "bus",
-              "cableTram",
-              "ferry",
-              "funicular",
-              "monorail",
-              "rail",
-              "subway",
-              "trolleybus",
-              "tram"
             ]
           }
         },
@@ -306,10 +297,6 @@
   ],
   "hasAvailableAreas":{
     "type": "array"
-  },
-  "RefBusVehicle_Model":{
-    "type": "string",
-    "format": "uri"
   },
   "Devices":{
      "type": "array"
