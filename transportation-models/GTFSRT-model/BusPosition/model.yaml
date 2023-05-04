@@ -1,4 +1,4 @@
-BusLocation:
+BusPosition:
   description: "The data model is a general description of a bus location"
   properties:
     id:
