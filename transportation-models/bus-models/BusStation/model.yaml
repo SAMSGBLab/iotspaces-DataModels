@@ -1,19 +1,161 @@
 BusStation:
   description: "The data model is a general description of urban bus stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."
   properties:
-        type: 
+    id:
+      anyOf: &busstation_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-          enum:
-            - BusStation
-          description: "Property. NGSI Entity type. It has to be TransportStation"
-        dateLastReported: 
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
           type: string
-          format: date-time
-          description: "Property. A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat."
-        stationType:
+      x-ngsi:
+        type: Property
+    type:
+      type: string
+      enum:
+        - BusStation
+      description: "Property. NGSI Entity type. It has to be TransportStation"
+      x-ngsi:
+        type: Property
+    dateLastReported:
+      type: string
+      format: date-time
+      description: "Property. A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat."
+      x-ngsi:
+        type: Property
+    stationType:
+      type: array
+      description: "Property. Type of transport station. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'"
+      items:
+        type: string
+        enum:
+          - aerialLift
+          - bus
+          - cableTram
+          - ferry
+          - funicular
+          - monorail
+          - rail
+          - subway
+          - trolleybus
+          - tram
+      x-ngsi:
+        type: Property
+    locationType:
+      type: number
+      description: "Property. Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn't correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle."
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+      x-ngsi:
+        type: Property
+    levelId:
+      type: number
+      description: "Property. Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices."
+      x-ngsi:
+        type: Property
+    platformCode:
+      type: number
+      description: "Property. Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station."
+      x-ngsi:
+        type: Property
+    zoneId:
+      type: string
+      description: "Property. Pricing zone of the station."
+      x-ngsi:
+        type: Property
+    wheelChairAccessible:
+      type: number
+      description: "Property. Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms."
+      enum:
+        - 0
+        - 1
+        - 2
+      x-ngsi:
+        type: Property
+    contractingAuthority:
+      type: string
+      description: "Property. Name of the contracting authority."
+      x-ngsi:
+        type: Property
+    contractingCompany:
+      type: string
+      description: "Property. Name of the contracting company responsible for the exploitation of the station."
+      x-ngsi:
+        type: Property
+    webSite:
+      type: string
+      description: "Property. Link to the official website for more information.."
+      x-ngsi:
+        type: Property
+    installationMode:
+      type: string
+      description: "Property. Location  relative to the ground reference. Enum:'aerial, ground, underGround, underSea'"
+      enum:
+        - aerial
+        - ground
+        - underGround
+        - underSea
+      x-ngsi:
+        type: Property
+    dimension:
+      type: object
+      description: "Property. Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters. Units:'meters'"
+      properties:
+        height:
+          type: number
+          minimum: 0
+        width:
+          type: number
+          minimum: 0
+        depth:
+          type: number
+          minimum: 0
+      x-ngsi:
+        type: Property
+    inventory:
+      type: object
+      description: "Property. General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items."
+      properties:
+        nbOfIOPoint:
+          type: number
+          minimum: 0
+          x-ngsi:
+            type: Property
+        nbOfLane:
+          type: number
+          minimum: 0
+          x-ngsi:
+            type: Property
+        nbOfPlatform:
+          type: number
+          minimum: 0
+          x-ngsi:
+            type: Property
+        PlatformType:
           type: array
-          description: "Property. Type of transport station. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'",
           items:
+            type: string
+            enum:
+              - lateral
+              - central
+            x-ngsi:
+              type: Property
+      x-ngsi:
+        type: Property
+    stationConnected:
+      type: array
+      description: "Property. Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'"
+      items:
+        type: object
+        properties:
+          stationType:
             type: string
             enum:
               - aerialLift
@@ -24,171 +166,130 @@ BusStation:
               - monorail
               - rail
               - subway
-              - trolleybus
+              - train
               - tram
-        locationType:
-          type: number
-          description: "Property. Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn't correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.",
-          enum:
-            - 0
-            - 1
-            - 2
-            - 3
-            - 4
-          description: "Relationship. Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case '1' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case '2' location_type = 1  (Station), this field must be empty. Case '3' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case '4' location_type = 4 (boarding area), the parent_station field contains the ID of a platform."
-        levelId:
-          type: number
-          description: "Property. Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices."
-        platformCode:
-          type: number
-          description: "Property. Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station."
-        zoneId:
-          type: string
-          description: "Property. Pricing zone of the station."
-        wheelChairAccessible:
-          type: number
-          description: "Property. Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms.",
-          enum:
-            - 0
-            - 1
-            - 2
-        contractingAuthority:
-          type: string
-          description: "Property. Name of the contracting authority."
-        contractingCompany:
-          type: string
-          description: "Property. Name of the contracting company responsible for the exploitation of the station."
-        webSite:
-          type: string
-          description: "Property. Link to the official website for more information.."
-        installationMode:
-          type: string
-          description: "Property. Location  relative to the ground reference. Enum:'aerial, ground, underGround, underSea'"
-          enum:
-            - aerial
-            - ground
-            - underGround
-            - underSea
-        dimension:
-          type: object
-          description: "Property. Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters. Units:'meters'",
-          properties:
-            height:
-              type: number
-              minimum: 0
-            width:
-              type: number
-              minimum: 0
-            depth:
-              type: number
-              minimum: 0
-        inventory:
-          type: object
-          description: "Property. General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items.",
-          properties:
-            nbOfIOPoint:
-              type: number
-              minimum: 0
-            nbOfLane:
-              type: number
-              minimum: 0
-            nbOfPlatform:
-              type: number
-              minimum: 0
-            PlatformType:
-              type: array
-              items:
-                type: string
-                enum:
-                  - lateral
-                  - central
-        stationConnected:
-          type: array
-          description: "Property. Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'",
-          items:
-            type: object
-            properties:
-              stationType:
-                type: string
-                enum:
-                  - aerialLift
-                  - bus
-                  - cableTram
-                  - ferry
-                  - funicular
-                  - monorail
-                  - rail
-                  - subway
-                  - train
-                  - tram
-                  - trolleybus
-              linesConnected:
-                type: array,
-                items: 
-                  type: string
-          services:
-            type: object,
-            properties: 
-              purchaseDevice:
-                type: Boolean
-              interactiveDevice:
-                type: Boolean
-              timetableDevice:
-                type: Boolean
-              voiceDevice:
-                type: Boolean
-              informationBoardDevice: 
-                type: Boolean
-              messageDevice:
-                type: Boolean
-              shelters:
-                type: Boolean
-              restBench:
-                type: Boolean
-              emergencyPhone:
-                type: Boolean
-              defibrillator:
-                type: Boolean
-              wheelChairAccessible:
-                type: Boolean
-          paymentAccepted:
-            type: array
+              - trolleybus
+            x-ngsi:
+              type: Property
+          linesConnected:
+            type: array,
             items:
               type: string
-              enum:
-                - Cash
-                - CreditCard
-                - CryptoCurrency
-                - other
-          currencyAccepted:
-            type: array
-            items:
-              type: string
-              enum:
-                - EUR
-                - USD
-          constructionDate:
+              x-ngsi:
+                type: Property
+        x-ngsi:
+          type: Property
+      services:
+        type: object,
+        properties:
+          purchaseDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          interactiveDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          timetableDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          voiceDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          informationBoardDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          messageDevice:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          shelters:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          restBench:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          emergencyPhone:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          defibrillator:
+            type: Boolean
+            x-ngsi:
+              type: Property
+          wheelChairAccessible:
+            type: Boolean
+            x-ngsi:
+              type: Property
+        x-ngsi:
+          type: Property
+      paymentAccepted:
+        type: array
+        items:
+          type: string
+          enum:
+            - Cash
+            - CreditCard
+            - CryptoCurrency
+            - other
+          x-ngsi:
+            type: Property
+        x-ngsi:
+          type: Property
+      currencyAccepted:
+        type: array
+        items:
+          type: string
+          enum:
+            - EUR
+            - USD
+          x-ngsi:
+            type: Property
+        x-ngsi:
+          type: Property
+      constructionDate:
+        type: string
+        format: date-time
+        x-ngsi:
+          type: Property
+      commissioningDate:
+        type: string
+        format: date-time
+        x-ngsi:
+          type: Property
+      architect:
+        type: string
+        x-ngsi:
+          type: Property
+      featuredArtist:
+        type: array
+        items:
+          anyOf:
             type: string
-            format: date-time
-          commissioningDate:
-            type: string
-            format: date-time
-          architect:
-            type: string
-          featuredArtist:
-            type: array
-            items:
-              anyOf:
-                  type: string
+        x-ngsi:
+          type: Property
   hasAvailableAreas:
     type: array
+    x-ngsi:
+      type: Property
   RefBusVehicle_Model:
     type: string
     format: uri
+    x-ngsi:
+      type: Property
   Devices:
-     type: array
+    type: array
+    x-ngsi:
+      type: Property
   Observations:
     type: array
+    x-ngsi:
+      type: Property
   required:
     - id
     - type
