@@ -1,15 +1,16 @@
 TripUpdate:
   description: "The data model is a general description of a FeedMessage"
   properties:
-    description:
-      description: A description of this item
-      type: string
-      x-ngsi:
-        type: Property
     id:
-      type: string
-      format: uri
-      description: Unique identifier of the entity
+      anyOf: &tripupdate_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
       x-ngsi:
         type: Property
     name:
@@ -25,54 +26,75 @@ TripUpdate:
       x-ngsi:
         type: Property
     trip:
-        type: object
-        properties:
-            trip_id:
+      type: object
+      properties:
+        trip_id:
+           anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
+            - description: Property. Identifier format of any NGSI entity
               format: uri
-              x-ngsi:
-                type: Property
-            route_id:
               type: string
+           x-ngsi:
+             type: Relationship
+        route_id:
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
               format: uri
-              x-ngsi:
-                type: Property
-            direction_id:
-              type: number
-              x-ngsi:
-                type: Property
-            start_time:
               type: string
-              x-ngsi:
-                type: Property
-            start_date:
-              type: string
-              x-ngsi:
-                type: Property
-            schedule_relationship:
-              type: string
-              enum:
-                - SCHEDULED
-                - ADDED
-                - UNSCHEDULED
-                - CANCELED
-                - REPLACEMENT
-                - DUPLICATED
-              x-ngsi:
-                type: Property
+          x-ngsi:
+            type: Relationship
+        direction_id:
+          type: number
+          x-ngsi:
+            type: Property
+        start_time:
+          type: string
+          x-ngsi:
+            type: Property
+        start_date:
+          type: string
+          x-ngsi:
+            type: Property
+        schedule_relationship:
+          type: string
+          enum:
+            - SCHEDULED
+            - ADDED
+            - UNSCHEDULED
+            - CANCELED
+            - REPLACEMENT
+            - DUPLICATED
+          x-ngsi:
+            type: Property
     bus:
       type: object
       properties:
         id:
-          type: string
-          format: uri
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
+              format: uri
+              type: string
           x-ngsi:
-            type: Property
+            type: Relationship
         label:
           type: string
           x-ngsi:
             type: Property
-        license_plate:{
+        license_plate:
           type: string
           x-ngsi:
             type: Property
@@ -93,33 +115,33 @@ TripUpdate:
           arrival:
             type: object
             properties:
-             delay:
-              type: number
-              x-ngsi:
-                type: Property
-             time:
-              type: number
-              x-ngsi:
-                type: Property
-             uncertainty:
-              type: number
-              x-ngsi:
-                type: Property
+              delay:
+                type: number
+                x-ngsi:
+                  type: Property
+              time:
+                type: number
+                x-ngsi:
+                  type: Property
+              uncertainty:
+                type: number
+                x-ngsi:
+                  type: Property
         departure:
           type: object
           properties:
-           delay:
-            type: number
-            x-ngsi:
-              type: Property
-           time:
-            type:number
-            x-ngsi:
-              type: Property
-           uncertainty:
-            type:number
-            x-ngsi:
-              type: Property
+            delay:
+              type: number
+              x-ngsi:
+                type: Property
+            time:
+              type: number
+              x-ngsi:
+                type: Property
+            uncertainty:
+              type: number
+              x-ngsi:
+                type: Property
         schedule_relationship:
           type: string
           enum:
