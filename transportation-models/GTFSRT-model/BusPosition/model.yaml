@@ -2,81 +2,133 @@ BusPosition:
   description: "The data model is a general description of a bus location"
   properties:
     id:
-      type: string
-      format: uri
+      anyOf: &busposition_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      x-ngsi:
+        type: Property
     type:
       type: string
       enum:
-          - BusPosition
+        - BusPosition
+      x-ngsi:
+        type: Property
       description: "Property. NGSI Entity type. It has to be BusPosition"
     trip:
-        type: object
-        properties:
-            trip_id:
+      type: object
+      properties:
+        trip_id:
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
+            - description: Property. Identifier format of any NGSI entity
               format: uri
-            route_id:
               type: string
+          x-ngsi:
+            type: Relationship
+        route_id:
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
               format: uri
-            direction_id:
-              type: number
-            start_time:
-                type: string
-            start_date:
               type: string
-            schedule_relationship:
-              type: string
-              enum:
-                  - SCHEDULED
-                  - ADDED
-                  - UNSCHEDULED
-                  - CANCELED
-                  - REPLACEMENT
-                  - DUPLICATED
+          x-ngsi:
+            type: Relationship
+        direction_id:
+          type: number
+        start_time:
+          type: string
+        start_date:
+          type: string
+        schedule_relationship:
+          type: string
+          enum:
+            - SCHEDULED
+            - ADDED
+            - UNSCHEDULED
+            - CANCELED
+            - REPLACEMENT
+            - DUPLICATED
+        x-ngsi:
+          type: Property
     bus:
       type: object
       properties:
         id:
-          type: string
-          format: uri
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
+              format: uri
+              type: string
+          x-ngsi:
+            type: Relationship
         label:
           type: string
         license_plate:
           type: string
     position:
-	type: object
-	properties:
-		latitude:
-			type: float
-		longtitude:
-			type: float
-		bearing:
-			type: float
-		odometer:
-			type: double
-		speed:
-			type: double
+      type: object
+      properties:
+        latitude:
+          type: float
+        longtitude:
+          type: float
+        bearing:
+          type: float
+        odometer:
+          type: double
+        speed:
+          type: double
+      x-ngsi:
+        type: Property
     current_stop_sequence:
       type: integer
+      x-ngsi:
+        type: Property
     stop_id:
       type: string
       format: uri
+      x-ngsi:
+        type: Property
     current_status:
       type: string
       enum:
-	- INCOMING_AT
-	- STOPPED_AT
-	- IN_TRANSIT_TO
+        - INCOMING_AT
+        - STOPPED_AT
+        - IN_TRANSIT_TO
+      x-ngsi:
+        type: Property
     timestamp:
-	    type: number
+      type: number
+      x-ngsi:
+        type: Property
     congestion_level:
-	    type: string
-	    enum:
-		    - SEVERE_CONGESTION
-		    - RUNNING_SMOOTHLY
-		    - STOP_AND_GO
-		    - CONGESTION
-		    - SEVERE_CONGESTION
+      type: string
+      enum:
+        - SEVERE_CONGESTION
+        - RUNNING_SMOOTHLY
+        - STOP_AND_GO
+        - CONGESTION
+        - SEVERE_CONGESTION
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
