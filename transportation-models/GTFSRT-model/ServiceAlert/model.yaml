@@ -2,47 +2,100 @@ ServiceAlert:
   description: "The data model is a general description of a ServiceAlert"
   properties:
     id:
-      type: string
-      format: uri
+      anyOf: &servicealert_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
     type:
       type: string
       enum:
         - ServiceAlert
       description: "Property. NGSI Entity type. It has to be ServiceAlert"
+      x-ngsi:
+        type: Property
     active_period:
       type: object
       properties:
         start:
           type: number
-        end: 
+        end:
           type: number
+      x-ngsi:
+        type: Property
     informed_entity:
       type: object
-      properties: 
-        agency_id: 
-          type: string
-	  format: uri
+      properties:
+        agency_id:
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
+              format: uri
+              type: string
+              x-ngsi:
+                type: Relationship
         route_id:
-          type: string
-	  format: uri
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
+              format: uri
+              type: string
+              x-ngsi:
+                type: Relationship
         route_type:
           type: number
         trip:
           type: object
           properties:
             trip_id:
-              type: string
-              format: uri
+              anyOf:
+                - description: Property. Identifier format of any NGSI entity
+                  maxLength: 256
+                  minLength: 1
+                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                  type: string
+                - description: Property. Identifier format of any NGSI entity
+                  format: uri
+                  type: string
+              x-ngsi:
+                type: Relationship
             route_id:
-              type: string
-              format: uri
+              anyOf:
+                - description: Property. Identifier format of any NGSI entity
+                  maxLength: 256
+                  minLength: 1
+                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                  type: string
+                - description: Property. Identifier format of any NGSI entity
+                  format: uri
+                  type: string
+              x-ngsi:
+                type: Relationship
             direction_id:
               type: number
+              x-ngsi:
+                type: Property
             start_time:
               type: string
+              x-ngsi:
+                type: Property
             start_date:
               type: string
-            schedule_relationship: 
+              x-ngsi:
+                type: Property
+            schedule_relationship:
               type: string
               enum:
                 - SCHEDULED
@@ -51,19 +104,36 @@ ServiceAlert:
                 - CANCELED
                 - REPLACEMENT
                 - DUPLICATED
+              x-ngsi:
+                type: Property
         stop_id:
-          type: string
-          format: uri
+          anyOf:
+            - description: Property. Identifier format of any NGSI entity
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: Property. Identifier format of any NGSI entity
+              format: uri
+              type: string
+          x-ngsi:
+            type: Relationship
+      x-ngsi:
+        type: Property
     cause:
       type: string
       enum:
         - OTHER_CAUSE
         - STRIKE
         - DEMONSTRATION
+      x-ngsi:
+        type: Property
     effect:
       type: string
-      enum: 
+      enum:
         - SIGNIFICANT_DELAYS
+      x-ngsi:
+        type: Property
     url:
       type: object
       properties:
@@ -74,6 +144,8 @@ ServiceAlert:
               type: string
             language:
               type: string
+      x-ngsi:
+        type: Property
     header_text:
       type: object
       properties:
@@ -84,16 +156,20 @@ ServiceAlert:
               type: string
             language:
               type: string
+        x-ngsi:
+        type: Property
     description_text:
       type: object
       properties:
         translation:
           type: object
           properties:
-            text: 
+            text:
               type: string
             language:
               type: string
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
