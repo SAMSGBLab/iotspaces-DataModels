@@ -1,42 +1,69 @@
 BusArea:
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  description: "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model."
   properties:
     id:
-        type: string
-        format: uri
+      anyOf: &busarea_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      x-ngsi:
+        type: Property
     type:
-        type: string
-        enum:
-            - BusArea
-        description: "Property. NGSI Entity type. It has to be BusArea"
+      type: string
+      enum:
+        - BusArea
+      description: "Property. NGSI Entity type. It has to be BusArea"
+      x-ngsi:
+        type: Property
     name:
       type: string
+      x-ngsi:
+        type: Property
     relativePosition:
       type: object
       properties:
-          type:
-              type: string
-              enum:
-                  - Polygon
-                  - Point
-                  - LineString
-                  - MultiLineString
-                  - Trimesh
-          measurementUnit:
-              type: string
-              default: m
-          Dimensions:
-              type: string
-              enum:
-                  - 2D
-                  - 3D
-              default: 2D
-          coordinates:
-              type: array
-          faces:
-              type: array
+        type:
+          type: string
+          enum:
+            - Polygon
+            - Point
+            - LineString
+            - MultiLineString
+            - Trimesh
+          x-ngsi:
+            type: Property
+        measurementUnit:
+          type: string
+          default: m
+          x-ngsi:
+            type: Property
+        Dimensions:
+          type: string
+          enum:
+            - 2D
+            - 3D
+          default: 2D
+          x-ngsi:
+            type: Property
+        coordinates:
+          type: array
+          x-ngsi:
+            type: Property
+        faces:
+          type: array
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        type: Property
     Observations:
       type: array
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
