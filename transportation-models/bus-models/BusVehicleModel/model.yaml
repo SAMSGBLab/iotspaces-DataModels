@@ -1,33 +1,56 @@
 BusVehicleModel:
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  description: "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model."
   properties:
-	type:
-	    type: string
-	    enum:
-		     - BusVehicleModel
-	    description: "Property. NGSI Entity type. It has to be BusVehicleModel"
-	brandName:
-	    type: string
-	    description: "Property. Vehicle's brand name. Model:'https://schema.org/brand'."
-
-	modelName:
-	    type: string
-	    description: "Property. Vehicle's model name. Model:'https://schema.org/model'."
-	manufacturerName:
-	    type: string
-	    description: "Property. Vehicle's manufacturer name. Model:'https://schema.org/Text'."
-	vehicleModelDate:
-	    type: string
-	    format: date-time
-	    description: "Property. The release date of a vehicle model (often used to differentiate versions of the same make and model). Model:'https://schema.org/vehicleModelDate'."
-	cargoVolume:
-	    type: number
-	    minimum: 0
-	    description: "Property. The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. Model:'https://schema.org/cargoVolume'. Units:'Liters'. If only a single value is provided (type Number) it will refer to the maximum volume."
-	fuelType:
-	    type: string
-	    description: "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/DateTime'. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'",
-	    enum:
+    id:
+      anyOf: &busvehiclemodel_-_properties_-_owner_-_items_-_anyof
+        - description: Property. Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: Property. Identifier format of any NGSI entity
+          format: uri
+          type: string
+      x-ngsi:
+        type: Property
+    type:
+      type: string
+      enum:
+        - BusVehicleModel
+      description: "Property. NGSI Entity type. It has to be BusVehicleModel"
+      x-ngsi:
+        type: Property
+    brandName:
+      type: string
+      description: "Property. Vehicle's brand name. Model:'https://schema.org/brand'."
+      x-ngsi:
+        type: Property
+    modelName:
+      type: string
+      description: "Property. Vehicle's model name. Model:'https://schema.org/model'."
+      x-ngsi:
+        type: Property
+    manufacturerName:
+      type: string
+      description: "Property. Vehicle's manufacturer name. Model:'https://schema.org/Text'."
+      x-ngsi:
+        type: Property
+    vehicleModelDate:
+      type: string
+      format: date-time
+      description: "Property. The release date of a vehicle model (often used to differentiate versions of the same make and model). Model:'https://schema.org/vehicleModelDate'."
+      x-ngsi:
+        type: Property
+    cargoVolume:
+      type: number
+      minimum: 0
+      description: "Property. The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. Model:'https://schema.org/cargoVolume'. Units:'Liters'. If only a single value is provided (type Number) it will refer to the maximum volume."
+      x-ngsi:
+        type: Property
+    fuelType:
+      type: string
+      description: "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/DateTime'. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'"
+      enum:
         - autogas
         - biodiesel
         - cng
@@ -43,45 +66,55 @@ BusVehicleModel:
         - petrol(unleaded)
         - petrol(leaded)
         - other
-	fuelConsumption:
-	    type: number
-	    minimum: 0,
-	    description: "Property. The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km). Model:'https://schema.org/fuelConsumption'. Units:'liters per 100 kilometer'"
-	height:
-	    type: number
-	    minimum: 0
-	    description: "Property. Vehicle's height. Model:'https://schema.org/height'."
-	width:
-	    type: number
-	    minimum: 0
-	    description: "Property. Vehicle's width. Model:'https://schema.org/width'."
-	depth:
-	    type: number
-	    minimum: 0
-	    description: "Property. Vehicle's depth. Model:'https://schema.org/depth'."
-	weight:
-	    type: number
-	    minimum: 0,
-	    description: "Property. Vehicle's weigth. Model:'https://schema.org/weigth'."
-	vehicleEngine:
-	    type: string
-	    description: "Property. Information about the engine or engines of the vehicle. Model:'https://schema.org/vehicleEngine'."
-	url:
-	    type: string
-	    format: uri
-	    description: "Property. URL which provides a description of this vehicle model. Model:'https://schema.org/URL'."
-  required:
-    - id
-    - name
-    - type
-    - vehicleType
-    - brandName
-    - modelName
-    - manufacturerName
+      x-ngsi:
+        type: Property
+    fuelConsumption:
+      type: number
+      minimum: 0,
+      description: "Property. The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km). Model:'https://schema.org/fuelConsumption'. Units:'liters per 100 kilometer'"
+      x-ngsi:
+        type: Property
+    height:
+      type: number
+      minimum: 0
+      description: "Property. Vehicle's height. Model:'https://schema.org/height'."
+      x-ngsi:
+        type: Property
+    width:
+      type: number
+      minimum: 0
+      description: "Property. Vehicle's width. Model:'https://schema.org/width'."
+      x-ngsi:
+        type: Property
+    depth:
+      type: number
+      minimum: 0
+      description: "Property. Vehicle's depth. Model:'https://schema.org/depth'."
+      x-ngsi:
+        type: Property
+    weight:
+      type: number
+      minimum: 0,
+      description: "Property. Vehicle's weigth. Model:'https://schema.org/weigth'."
+      x-ngsi:
+        type: Property
+    vehicleEngine:
+      type: string
+      description: "Property. Information about the engine or engines of the vehicle. Model:'https://schema.org/vehicleEngine'."
+      x-ngsi:
+        type: Property
+    url:
+      type: string
+      format: uri
+      description: "Property. URL which provides a description of this vehicle model. Model:'https://schema.org/URL'."
+      x-ngsi:
+        type: Property
+    required:
+      - id
+      - name
+      - type
+      - vehicleType
+      - brandName
+      - modelName
+      - manufacturerName
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json
-  x-model-tags: ""
-  x-version: 0.0.1
