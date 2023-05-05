@@ -1,8 +1,8 @@
 BusStationArea:
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  description: "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model."
   properties:
     id:
-      anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
+      anyOf: &busstationarea_-_properties_-_owner_-_items_-_anyof
         - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
@@ -20,43 +20,56 @@ BusStationArea:
       x-ngsi:
         type: Property
     previousLocation:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
-      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof
+      description: "Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon"
       x-ngsi:
         type: GeoProperty
     type:
-      description: NGSI Entity type. It has to be BusStationArea 
+      description: NGSI Entity type. It has to be BusStationArea
       enum:
         - Vehicle
       type: string
       x-ngsi:
         type: Property
     relativePosition:
-        type: object
-        properties:
-            type:
-                type: string,
-                enum:
-                    - Polygon
-                    - Point
-                    - LineString
-                    - MultiLineString
-                    - Trimesh
-            measurementUnit:
-                type: string
-                default: m
-            Dimensions:
-                type: string
-                enum: 
-                    - 2D
-                    - 3D
-                default: 2D
-            coordinates:
-                type: array
-            faces:
-                type: array
-      Observations:
-        type: array
+      type: object
+      properties:
+        type:
+          type: string,
+          enum:
+            - Polygon
+            - Point
+            - LineString
+            - MultiLineString
+            - Trimesh
+          x-ngsi:
+            type: Property
+        measurementUnit:
+          type: string
+          default: m
+          x-ngsi:
+            type: Property
+        Dimensions:
+          type: string
+          enum:
+            - 2D
+            - 3D
+          default: 2D
+          x-ngsi:
+            type: Property
+        coordinates:
+          type: array
+          x-ngsi:
+            type: Property
+        faces:
+          type: array
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        type: Property
+    Observations:
+      type: array
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
